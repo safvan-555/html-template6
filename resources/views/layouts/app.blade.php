@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'PoolWash - Pool Cleaning & Services')</title>
+    <title>@yield('title', 'Crystal Craft - Pool Cleaning & Services')</title>
 
     <!--=====FAB ICON=======-->
-    <link rel="shortcut icon" href="{{ asset('assets/img/logo/fav-logo3.png') }}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ asset('assets/img/logo/crystal-craft-favicon.ico') }}" type="image/x-icon" />
 
     <!--===== CSS LINK =======-->
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/bootstrap.min.css') }}" />

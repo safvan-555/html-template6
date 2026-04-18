@@ -220,5 +220,5 @@ span.multi-drop-icon {
 
 ul.mobile-nav-list {
     max-height: 500px;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }

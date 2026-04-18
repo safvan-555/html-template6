@@ -35,8 +35,8 @@
                                 <li><a href="{{ route('about') }}">About</a></li>
                                 <li><a href="{{ route('services') }}">Services</a></li>
                                 <li><a href="{{ route('projects') }}">Projects</a></li>
-                                <li><a href="{{ route('blogs') }}">Blogs</a></li>
-                                <li><a href="{{ route('pages') }}">Pages</a></li>
+                                <li><a href="{{ route('blogs') }}">Contact Us</a></li>
+                                <!-- <li><a href="{{ route('pages') }}">Pages</a></li> -->
                             </ul>
                         </div>
                         <div class="btn-area">

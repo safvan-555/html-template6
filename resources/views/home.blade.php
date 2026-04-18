@@ -1,18 +1,18 @@
 @extends('layouts.app')
 
-@section('title', 'PoolWash - Pool Cleaning & Services')
+@section('title', 'Crystal Craft - Crystal Craft & Services')
 @section('body-class', 'homepage3-body')
 
 @section('content')
     <!--===== HERO AREA STARTS =======-->
     <div class="hero3-section-area">
-        <img src="{{ asset('assets/img/elements/elements15.png') }}" alt="" class="elements15" />
+        <!-- <img src="{{ asset('assets/img/elements/elements15.png') }}" alt="" class="elements15" /> -->
         <div class="container">
             <div class="row">
                 <div class="col-lg-5">
                     <div class="hero4-header heading5">
                         <h5 data-aos="fade-up" data-aos-duration="800">
-                            #01. Pool Cleaning & Services
+                            #01. Crystal Craft & Services
                         </h5>
                         <h1 class="text-anime-style-3">
                             Pool Maintenance For Crystal Clear Enjoyment!
@@ -21,7 +21,7 @@
                         <p data-aos="fade-up" data-aos-duration="1000">
                             Trust us to handle the details so you can focus on what matters
                             most enjoying your pool to the fullest. Experience the ultimate
-                            in pool cleanliness and care with Poolwash.
+                            in pool cleanliness and care with Crystal Craft.
                         </p>
                         <div class="btn-area2" data-aos="fade-up" data-aos-duration="1200">
                             <a href="{{ route('quote') }}" class="header-btn3">
@@ -35,9 +35,9 @@
                 </div>
             </div>
         </div>
-        <div class="auhtor-area">
+        <!-- <div class="auhtor-area">
             <div class="img1">
-                <img src="{{ asset('assets/img/all-images/others/author-img2.png') }}" alt="" />
+                <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/others/author-img2.png" alt="" />
             </div>
             <div class="content">
                 <p>Our Team Is Always Ready</p>
@@ -50,7 +50,7 @@
                     <li>5.0</li>
                 </ul>
             </div>
-        </div>
+        </div> -->
     </div>
     <!--===== HERO AREA ENDS =======-->
 
@@ -60,13 +60,13 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="images reveal image-anime">
-                        <img src="{{ asset('assets/img/all-images/about/about-img3.png') }}" alt="" />
+                        <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/about/about-img3.png" alt="" />
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="about3-header heading6">
                         <h5 data-aos="fade-left" data-aos-duration="800">
-                            Why Choose Us Poolwash
+                            Why Choose Us Crystal Craft
                         </h5>
                         <h2 class="text-anime-style-3">
                             Choosing Quality Why We're Your Top Pick
@@ -100,7 +100,7 @@
                         <div class="row">
                             @php
                                 $services = [
-                                    ['icon' => 'service-icon3.svg', 'title' => 'Seasonal Pool Prep', 'desc' => 'Experience the ultimate in pool cleanliness with our Crystal Clear Pool Cleaning.'],
+                                    ['icon' => 'service-icon3.svg', 'title' => 'Seasonal Pool Prep', 'desc' => 'Experience the ultimate in pool cleanliness with our Crystal Clear Crystal Craft.'],
                                     ['icon' => 'service-icon4.svg', 'title' => 'Ultimate Pool Refresh', 'desc' => 'Ensuring sparkling clear water. Trust us to maintain a pristine environment.'],
                                     ['icon' => 'service-icon5.svg', 'title' => 'Precision Pool Repairs', 'desc' => 'Keep your pool safe and inviting with our Perfect Chemical Balancing.'],
                                     ['icon' => 'service-icon6.svg', 'title' => 'Algae-Free Assurance', 'desc' => 'Ensure your pool operates smoothly with our Expert Equipment Maintenance.']
@@ -135,7 +135,7 @@
                 <div class="col-lg-6">
                     <div class="service3-header heading6">
                         <h5 data-aos="fade-left" data-aos-duration="800">
-                            Our Service Us Poolwash
+                            Our Service Us Crystal Craft
                         </h5>
                         <h2 class="text-anime-style-3">
                             Comprehensive Pool Care Luxury Pool Detailing
@@ -146,7 +146,7 @@
                         </p>
                         <div class="space40"></div>
                         <div class="images reveal image-anime">
-                            <img src="{{ asset('assets/img/all-images/service/service-img3.png') }}" alt="" />
+                            <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/service/service-img3.png" alt="" />
                         </div>
                     </div>
                 </div>
@@ -156,13 +156,13 @@
     <!--===== SERVICE AREA ENDS =======-->
 
     <!--===== PRICING AREA STARTS =======-->
-    <div class="pricing-plan-section-area sp2">
+    <!-- <div class="pricing-plan-section-area sp2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 m-auto">
                     <div class="pricing-header heading6 text-center">
                         <h5 data-aos="fade-left" data-aos-duration="800">
-                            Pricing Plan Poolwash
+                            Pricing Plan Crystal Craft
                         </h5>
                         <h2 class="text-anime-style-3">Affordable Pool Care Packages</h2>
                         <p data-aos="fade-left" data-aos-duration="1000">
@@ -265,7 +265,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!--===== PRICING AREA ENDS =======-->
 
     <!--===== BRANDS AREA STARTS =======-->
@@ -320,7 +320,7 @@
                 <div class="col-lg-12">
                     <div class="images-area">
                         <div class="image-anime reveal">
-                            <img src="{{ asset('assets/img/all-images/others/others-img1.png') }}" alt="" />
+                            <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/others/others-img1.png" alt="" />
                         </div>
                         <div class="play-btn">
                             <a href="https://www.youtube.com/watch?v=Y8XpQpW5OVY" class="popup-youtube">
@@ -346,7 +346,7 @@
                 <div class="col-lg-8 m-auto">
                     <div class="heading6 text-center">
                         <h5 data-aos="fade-right" data-aos-duration="800">
-                            Testimonial Poolwash
+                            Testimonial Crystal Craft
                         </h5>
                         <h2 class="text-anime-style-3">
                             Customer Reviews Words Of Praise
@@ -365,9 +365,9 @@
                     <div class="tes2-solider-parent" data-aos="fade-up" data-aos-duration="700">
                         @php
                             $testimonials = [
-                                ['name' => 'Matthew C. Lansberry', 'role' => 'Pool Owner', 'img' => 'testimonial-img7.png'],
-                                ['name' => 'Heinrich Kaasen', 'role' => 'Amazing Pool Owner', 'img' => 'testimonial-img11.png'],
-                                ['name' => 'Keshav Maharaj', 'role' => 'Green Pool Owner', 'img' => 'testimonial-img12.png']
+                                ['name' => 'Matthew C. Lansberry', 'role' => 'Pool Owner', 'img' => 'https://html.vikinglab.agency/poolwash/assets/img/all-images/testimonial/testimonial-img7.png'],
+                                ['name' => 'Heinrich Kaasen', 'role' => 'Amazing Pool Owner', 'img' => 'https://html.vikinglab.agency/poolwash/assets/img/all-images/testimonial/testimonial-img11.png'],
+                                ['name' => 'Keshav Maharaj', 'role' => 'Green Pool Owner', 'img' => 'https://html.vikinglab.agency/poolwash/assets/img/all-images/testimonial/testimonial-img12.png']
                             ];
                         @endphp
                         @foreach($testimonials as $testimonial)
@@ -376,7 +376,8 @@
                                     <div class="col-lg-5">
                                         <div class="big-img">
                                             <div class="tes2-big-image img100 image-anime reveal">
-                                                <img src="{{ asset('assets/img/all-images/testimonial/' . $testimonial['img']) }}" alt="" />
+                                                <!-- <img src="{{ asset('assets/img/all-images/testimonial/' . $testimonial['img']) }}" alt="" /> -->
+                                             <img src="{{ $testimonial['img'] }}" alt="" />
                                             </div>
                                         </div>
                                     </div>
@@ -422,7 +423,8 @@
                     @foreach($testimonials as $index => $testimonial)
                         <div class="tes2-bottom">
                             <div class="img50 img">
-                                <img src="{{ asset('assets/img/all-images/testimonial/testimonial-img' . (8 + $index) . '.png') }}" alt="" />
+                                <!-- <img src="{{ asset('assets/img/all-images/testimonial/testimonial-img' . (8 + $index) . '.png') }}" alt="" /> -->
+                                <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/testimonial/testimonial-img{{ 8 + $index }}.png" alt="" />
                             </div>
                             <div class="bottom-hadding">
                                 <h4><a href="#">{{ $testimonial['name'] }}</a></h4>
@@ -445,7 +447,7 @@
             <div class="row">
                 <div class="col-lg-8 m-auto">
                     <div class="contact-heading heading6 text-center">
-                        <h5>Contact Us Poolwash</h5>
+                        <h5>Contact Us Crystal Craft</h5>
                         <h2>Have Questions Reach Out Experts</h2>
                         <p>
                             We're here to assist you with all your pool care needs. Whether you have a question
@@ -515,7 +517,7 @@
                                     </div>
                                     <div class="textarea">
                                         <h4>Contact Us</h4>
-                                        <p>8708 Technology Forest Pl Suite 125 -G, The Woodlands, TX 77381</p>
+                                        <p>Office 82, Oud Al Muteena 3, United Arab Emirates</p>
                                     </div>
                                 </div>
                                 <div class="space20"></div>
@@ -525,7 +527,7 @@
                                     </div>
                                     <div class="textarea m-0">
                                         <h4>Call or text</h4>
-                                        <a href="tel:123-456-7890">123-456-7890</a>
+                                        <a href="tel:971569632293">+971569632293</a>
                                     </div>
                                 </div>
                                 <div class="space20"></div>
@@ -535,7 +537,7 @@
                                     </div>
                                     <div class="textarea m-0">
                                         <h4>Email us today</h4>
-                                        <a href="mailto:info@taxvice.com">info@taxvice.com</a>
+                                        <a href="mailto:info@crystalcraftuae.com">info@crystalcraftuae.com</a>
                                     </div>
                                 </div>
                             </div>
@@ -555,10 +557,10 @@
                     <div class="blog-header">
                         <div class="heading6">
                             <h5 data-aos="fade-right" data-aos-duration="800">
-                                Our Blog Poolwash
+                                Our Blog Crystal Craft
                             </h5>
                             <h2 class="text-anime-style-3">
-                                The Benefits Of Regular Pool Cleaning
+                                The Benefits Of Regular Crystal Craft
                             </h2>
                         </div>
                     </div>
@@ -582,23 +584,25 @@
             <div class="row">
                 @php
                     $blogs = [
-                        ['title' => 'Pool Safety 101: Essential Tips for a Safe Swimming Environment', 'desc' => 'Closing your pool properly for the winter is crucial to protecting it from damage.', 'img' => 'blog-img1.png'],
-                        ['title' => 'Revamp Your Backyard Oasis: Stunning Pool Renovation Ideas', 'desc' => 'Discover the latest trends in pool design and renovation, from innovative lighting', 'img' => 'blog-img2.png'],
-                        ['title' => 'Professional Pool Maintenance: What\'s Right for You?', 'desc' => 'Helping you understand how to balance pH, chlorine, and other essential elements', 'img' => 'blog-img3.png']
+                        ['title' => 'Pool Safety 101: Essential Tips for a Safe Swimming Environment', 'desc' => 'Closing your pool properly for the winter is crucial to protecting it from damage.', 'img' => 'https://html.vikinglab.agency/poolwash/assets/img/all-images/blog/blog-img1.png'],
+                        ['title' => 'Revamp Your Backyard Oasis: Stunning Pool Renovation Ideas', 'desc' => 'Discover the latest trends in pool design and renovation, from innovative lighting', 'img' => 'https://html.vikinglab.agency/poolwash/assets/img/all-images/blog/blog-img2.png'],
+                        ['title' => 'Professional Pool Maintenance: What\'s Right for You?', 'desc' => 'Helping you understand how to balance pH, chlorine, and other essential elements', 'img' => 'https://html.vikinglab.agency/poolwash/assets/img/all-images/blog/blog-img3.png']
                     ];
                 @endphp
                 @foreach($blogs as $index => $blog)
                     <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="{{ 800 + ($index * 200) }}">
                         <div class="blog-boxarea">
                             <div class="img1 image-anime">
-                                <img src="{{ asset('assets/img/all-images/blog/' . $blog['img']) }}" alt="" />
+                                <!-- <img src="{{ asset('assets/img/all-images/blog/' . $blog['img']) }}" alt="" /> -->
+                                <img src="{{ $blog['img'] }}" alt="" />
+
                             </div>
                             <div class="date">
                                 <a href="#">20 <br /> Jun</a>
                             </div>
                             <div class="content-area">
                                 <ul>
-                                    <li><a href="#" class="tag"># Pool Cleaning</a></li>
+                                    <li><a href="#" class="tag"># Crystal Craft</a></li>
                                 </ul>
                                 <div class="space16"></div>
                                 <a href="{{ route('blog.show', $index + 1) }}">{{ $blog['title'] }}</a>
@@ -623,10 +627,16 @@
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <div class="cta-main-area">
-                        <img src="{{ asset('assets/img/all-images/cta/cta-img2.png') }}" alt="" class="cta-img2" />
+                        <!-- <img src="{{ asset('assets/img/all-images/cta/cta-img2.png') }}" alt="" class="cta-img2" />
                         <img src="{{ asset('assets/img/all-images/cta/cta-img3.png') }}" alt="" class="cta-img3" />
                         <img src="{{ asset('assets/img/all-images/cta/cta-img4.png') }}" alt="" class="cta-img4" />
-                        <img src="{{ asset('assets/img/all-images/cta/cta-img5.png') }}" alt="" class="cta-img5" />
+                        <img src="{{ asset('assets/img/all-images/cta/cta-img5.png') }}" alt="" class="cta-img5" /> -->
+
+                         <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/cta/cta-img2.png" alt="" class="cta-img2" />
+                        <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/cta/cta-img3.png" alt="" class="cta-img3" />
+                        <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/cta/cta-img4.png" alt="" class="cta-img4" />
+                        <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/cta/cta-img5.png" alt="" class="cta-img5" />
+
                         <div class="row">
                             <div class="col-lg-5 m-auto">
                                 <div class="cta-header heading5 text-center">

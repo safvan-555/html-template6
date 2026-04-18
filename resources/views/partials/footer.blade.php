@@ -63,7 +63,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="copyright-area">
-                    <p>Copyright {{ date('Y') }} Poolwash. All Rights Reserved</p>
+                    <p>Copyright {{ date('Y') }} Crystal Craft. All Rights Reserved</p>
                     <p>
                         <a href="#">Terms & Conditions</a> <span> | </span>
                         <a href="#">Privacy Policy</a>
