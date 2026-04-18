@@ -33,7 +33,7 @@
         </ul>
 
         <div class="allmobilesection">
-            <a href="{{ route('quote') }}" class="header-btn1">
+            <a href="{{ route('contact') }}" class="header-btn1">
                 <img src="{{ asset('assets/img/icons/logo-icon1.svg') }}" alt="" /> Get Started
                 <span></span>
             </a>

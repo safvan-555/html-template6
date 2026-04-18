@@ -1,6 +1,6 @@
 <!--===== FOOTER AREA STARTS =======-->
 <div class="footer3-section-area">
-    <!-- <img src="{{ asset('assets/img/elements/elements2.png') }}" alt="" class="elements2 sw" /> -->
+    <img src="{{ asset('assets/img/elements/elements2.png') }}" alt="" class="elements2 sw" />
     <div class="container">
         <div class="row">
             <div class="col-lg col-md-6">

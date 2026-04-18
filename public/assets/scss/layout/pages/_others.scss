@@ -107,6 +107,41 @@
 	-webkit-animation-delay: 1.4s;
 	animation-delay: 1.4s;
 }
+.ctn-preloader
+	.animation-preloader
+	.txt-loading
+	.letters-loading:nth-child(9):before {
+	-webkit-animation-delay: 1.6s;
+	animation-delay: 1.6s;
+}
+.ctn-preloader
+	.animation-preloader
+	.txt-loading
+	.letters-loading:nth-child(10):before {
+	-webkit-animation-delay: 1.8s;
+	animation-delay: 1.8s;
+}
+.ctn-preloader
+	.animation-preloader
+	.txt-loading
+	.letters-loading:nth-child(11):before {
+	-webkit-animation-delay: 2s;
+	animation-delay: 2s;
+}
+.ctn-preloader
+	.animation-preloader
+	.txt-loading
+	.letters-loading:nth-child(12):before {
+	-webkit-animation-delay: 2.2s;
+	animation-delay: 2.2s;
+}
+.ctn-preloader
+	.animation-preloader
+	.txt-loading
+	.letters-loading:nth-child(13):before {
+	-webkit-animation-delay: 2.4s;
+	animation-delay: 2.4s;
+}
 .ctn-preloader.dark .animation-preloader .spinner {
 	border-color: #d1d1d1;
 	border-top-color: #fff;

@@ -1,201 +1,296 @@
 @extends('layouts.app')
 
-@section('title', 'About Us - PoolWash')
+@section('title', 'Services - Crystal Craft')
 @section('body-class', 'homepage3-body')
 
 @section('content')
-    <!--===== BREADCRUMB AREA STARTS =======-->
-    <div class="breadcrumb-section-area" style="background: #f5f5f5; padding: 120px 0 60px 0;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h1 class="text-anime-style-3" style="font-size: 48px; margin-bottom: 20px;">About Us</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center" style="background: transparent; padding: 0;">
-                            <li class="breadcrumb-item"><a href="{{ url('/') }}" style="color: #007bff;">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page" style="color: #6c757d;">About Us</li>
-                        </ol>
-                    </nav>
+
+<!--===== HERO AREA STARTS =======-->
+<div class="inner-header-section-area">
+    <div class="elements2">
+        <img src="{{ asset('assets/img/elements/elements2.png') }}" alt="">
+    </div>
+    <div class="elements4">
+        <img src="{{ asset('assets/img/elements/elements4.png') }}" alt="">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 m-auto">
+                <div class="inner-page-header heading1 text-center">
+                    <h1>Our Services</h1>
+                    <a href="index.html">Home <i class="fa-solid fa-angle-right"></i> <span> Our Services </span></a>
                 </div>
             </div>
         </div>
     </div>
-    <!--===== BREADCRUMB AREA ENDS =======-->
+</div>
 
-    <!--===== ABOUT CONTENT STARTS =======-->
-    <div class="about3-section-area sp1">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="images reveal image-anime">
-                        <img src="{{ asset('assets/img/all-images/about/about-img3.png') }}" alt="About PoolWash" />
+<!--===== SERVICE AREA STARTS =======-->
+<div class="service-inner-section-area sp1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-boxarea">
+                    <div class="img1 image-anime">
+                        <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/service/service-img4.png"
+                            alt="">
+                        <!-- <img src="{{ asset('assets/img/all-images/service/service-img4.png') }}" alt=""> -->
+                    </div>
+                    <div class="content-area">
+                        <div class="icons">
+                            <img src="{{ asset('assets/img/icons/service-icon10.svg') }}" alt="">
+                        </div>
+                        <a href="{{ route('service.show', 1) }}">Swimming Pool</a>
+                        <div class="space16"></div>
+                        <p>Proper chemical balancing crucial for a safe and enjoyable swimming experience and other
+                            essential</p>
+                        <div class="space24"></div>
+                        <a href="{{ route('service.show', 1) }}" class="readmore">Read More <i
+                                class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="about3-header heading6">
-                        <h5 data-aos="fade-left" data-aos-duration="800">
-                            About Poolwash
-                        </h5>
-                        <h2 class="text-anime-style-3">
-                            We Provide Premium Pool Cleaning Services
-                        </h2>
-                        <p data-aos="fade-left" data-aos-duration="1000">
-                            From routine maintenance to complex repairs, we handle every aspect of pool care 
-                            with precision and care. Choose us for your pool needs & experience the difference 
-                            that comes with professional expertise.
-                        </p>
-                        <div class="space32"></div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="counter-box" data-aos="fade-up" data-aos-duration="800">
-                                    <h2 class="counter" style="font-size: 36px; font-weight: 700; color: #007bff;">500+</h2>
-                                    <p>Happy Clients</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="counter-box" data-aos="fade-up" data-aos-duration="900">
-                                    <h2 class="counter" style="font-size: 36px; font-weight: 700; color: #007bff;">1000+</h2>
-                                    <p>Projects Completed</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="counter-box" data-aos="fade-up" data-aos-duration="1000">
-                                    <h2 class="counter" style="font-size: 36px; font-weight: 700; color: #007bff;">10+</h2>
-                                    <p>Years Experience</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="counter-box" data-aos="fade-up" data-aos-duration="1100">
-                                    <h2 class="counter" style="font-size: 36px; font-weight: 700; color: #007bff;">24/7</h2>
-                                    <p>Support Available</p>
-                                </div>
-                            </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-boxarea">
+                    <div class="img1 image-anime">
+                        <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/service/service-img5.png"
+                            alt="">
+                        <!-- <img src="{{ asset('assets/img/all-images/service/service-img5.png') }}" alt=""> -->
+                    </div>
+                    <div class="content-area">
+                        <div class="icons">
+                            <img src="assets/img/icons/service-icon11.svg" alt="">
                         </div>
-                        <div class="space32"></div>
-                        <div data-aos="fade-left" data-aos-duration="1200">
-                            <a href="{{ route('contact') }}" class="header-btn3">
-                                <img src="{{ asset('assets/img/icons/logo-icon3.svg') }}" alt="" /> Contact Us
+                        <a href="{{ route('service.show', 2) }}">Design & Build</a>
+                        <div class="space16"></div>
+                        <p>Our thorough pool cleaning and skimming service removes debris, leaves, and dirt from the
+                            water.</p>
+                        <div class="space24"></div>
+
+                        <a href="{{ route('service.show', 2) }}" class="readmore">Read More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-boxarea">
+                    <div class="img1 image-anime">
+                        <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/service/service-img6.png"
+                            alt="">
+                        <!-- <img src="{{ asset('assets/img/all-images/service/service-img6.png') }}" alt=""> -->
+                    </div>
+                    <div class="content-area">
+                        <div class="icons">
+                            <img src="{{ asset('assets/img/icons/service-icon12.svg') }}" alt="">
+                        </div>
+                        <a href="{{ route('service.show', 3) }}">Land Scaping</a>
+                        <div class="space16"></div>
+                        <p>Filters are the heart of your pool's circulation system. Our filter best cleaning &
+                            replacement service</p>
+                        <div class="space24"></div>
+                        <a href="{{ route('service.show', 3) }}" class="readmore">Read More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-boxarea">
+                    <div class="img1 image-anime">
+                        <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/service/service-img7.png"
+                            alt="">
+                        <!-- <img src="{{ asset('assets/img/all-images/service/service-img7.png') }}" alt=""> -->
+                    </div>
+                    <div class="content-area">
+                        <div class="icons">
+                            <img src="{{ asset('ssets/img/icons/service-icon13.svg') }}" alt="">
+                        </div>
+                        <a href="{{ route('service.show', 4) }}">OutDoor Living</a>
+                        <div class="space16"></div>
+                        <p>Ensure your pool remains in top condition year-round with our comprehensive pool service</p>
+                        <div class="space24"></div>
+
+                        <a href="{{ route('service.show', 4) }}" class="readmore">Read More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-boxarea">
+                    <div class="img1 image-anime">
+                        <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/service/service-img8.png"
+                            alt="">
+                        <!-- <img src="{{ asset('assets/img/all-images/service/service-img8.png') }}" alt=""> -->
+                    </div>
+                    <div class="content-area">
+                        <div class="icons">
+                            <img src="{{ asset('assets/img/icons/service-icon14.svg') }}" alt="">
+                        </div>
+                        <a href="{{ route('service.show', 5) }}">Interior Design</a>
+                        <div class="space16"></div>
+                        <p>Our expert technicians handle everything from routine cleaning and chemical balancing
+                            repairs.</p>
+                        <div class="space24"></div>
+
+                        <a href="{{ route('service.show', 5) }}" class="readmore">Read More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-lg-4 col-md-6">
+                <div class="service-boxarea">
+                    <div class="img1 image-anime">
+                        <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/service/service-img9.png"
+                            alt="">
+                    </div>
+                    <div class="content-area">
+                        <div class="icons">
+                            <img src="{{ asset('assets/img/icons/service-icon15.svg') }}" alt="">
+                        </div>
+                        <a href="{{ route('service.show', 6) }}">Pool Inspection & Assessment</a>
+                        <div class="space16"></div>
+                        <p>With regular maintenance, you can enjoy a pristine pool without the hassle, knowing that
+                            every detail</p>
+                        <div class="space24"></div>
+                        <a href="{{ route('service.show', 6) }}" class="readmore">Read More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-boxarea">
+                    <div class="img1 image-anime">
+                        <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/service/service-img10.png"
+                            alt="">
+                    </div>
+                    <div class="content-area">
+                        <div class="icons">
+                            <img src="{{ asset('assets/img/icons/service-icon16.svg') }}" alt="">
+                        </div>
+                        <a href="{{ route('service.show', 7) }}">Pressure Washing Pool Decks</a>
+                        <div class="space16"></div>
+                        <p>We help prevent algae growth, protect your pool equipment, & ensure clear, sparkling</p>
+                        <div class="space24"></div>
+
+                        <a href="{{ route('service.show', 7) }}" class="readmore">Read More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-boxarea">
+                    <div class="img1 image-anime">
+                        <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/service/service-img11.png"
+                            alt="">
+                    </div>
+                    <div class="content-area">
+                        <div class="icons">
+                            <img src="{{ asset('assets/img/icons/service-icon17.svg') }}" alt="">
+                        </div>
+                        <a href="{{ route('service.show', 8) }}">Drain and Acid Wash Service</a>
+                        <div class="space16"></div>
+                        <p>Our precise chemical balancing service involves thorough testing of your pool water to
+                            determine</p>
+                        <div class="space24"></div>
+                        <a href="{{ route('service.show', 8) }}" class="readmore">Read More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-boxarea">
+                    <div class="img1 image-anime">
+                        <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/service/service-img12.png"
+                            alt="">
+                    </div>
+                    <div class="content-area">
+                        <div class="icons">
+                            <img src="{{ asset('assets/img/icons/service-icon18.svg') }}" alt="">
+                        </div>
+                        <a href="{{ route('service.show', 9) }}">Pool Renovation & Remodeling</a>
+                        <div class="space16"></div>
+                        <p>Achieving the perfect chemical balance is essential for a safe and enjoyable swimming
+                            experience.</p>
+                        <div class="space24"></div>
+
+                        <a href="{{ route('service.show', 9) }}" class="readmore">Read More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div> -->
+
+
+            <!-- <div class="space18"></div> -->
+            <!-- <div class="col-lg-12">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <i class="fa-solid fa-angle-left"></i>
                             </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        </li>
+                        <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">....</a></li>
+                        <li class="page-item"><a class="page-link" href="#">12</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div> -->
         </div>
     </div>
-    <!--===== ABOUT CONTENT ENDS =======-->
+</div>
+<!--===== SERVICE AREA ENDS =======-->
 
-    <!--===== WHY CHOOSE US STARTS =======-->
-    <div class="service3-section-area sp1" style="background: #f9f9f9;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 m-auto">
-                    <div class="heading6 text-center">
-                        <h5>Why Choose Us</h5>
-                        <h2 class="text-anime-style-3">What Makes Us Different</h2>
-                        <p>We pride ourselves on delivering exceptional service and results</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="800">
-                    <div class="service-boxarea">
-                        <div class="icons">
-                            <img src="{{ asset('assets/img/icons/service-icon3.svg') }}" alt="" />
-                        </div>
-                        <div class="space24"></div>
-                        <div class="content-area">
-                            <a href="#">Expert Technicians</a>
-                            <div class="space16"></div>
-                            <p>Our team is fully trained and certified in all aspects of pool maintenance and repair.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="900">
-                    <div class="service-boxarea">
-                        <div class="icons">
-                            <img src="{{ asset('assets/img/icons/service-icon4.svg') }}" alt="" />
-                        </div>
-                        <div class="space24"></div>
-                        <div class="content-area">
-                            <a href="#">Quality Products</a>
-                            <div class="space16"></div>
-                            <p>We use only the highest quality chemicals and equipment for your pool.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="1000">
-                    <div class="service-boxarea">
-                        <div class="icons">
-                            <img src="{{ asset('assets/img/icons/service-icon5.svg') }}" alt="" />
-                        </div>
-                        <div class="space24"></div>
-                        <div class="content-area">
-                            <a href="#">Affordable Pricing</a>
-                            <div class="space16"></div>
-                            <p>Competitive rates without compromising on quality of service.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--===== WHY CHOOSE US ENDS =======-->
 
-    <!--===== TEAM AREA STARTS =======-->
-    <div class="team-section-area sp1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 m-auto">
-                    <div class="heading6 text-center">
-                        <h5>Our Team</h5>
-                        <h2 class="text-anime-style-3">Meet Our Expert Team</h2>
-                        <p>Dedicated professionals committed to keeping your pool pristine</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800">
-                    <div class="team-box text-center">
-                        <div class="team-img">
-                            <img src="{{ asset('assets/img/all-images/testimonial/testimonial-img7.png') }}" alt="Team Member" style="border-radius: 50%; width: 200px; height: 200px; object-fit: cover;">
+<div class="cta1-section-area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <div class="cta-main-area">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="cta-header heading1">
+                                <h2 class="text-anime-style-3">Make Your Pool Sparkle Reach Out Today</h2>
+                                <p>Ready to experience the best in pool care? Don’t wait! Get your free quote today and
+                                    see how we can transform.</p>
+                                <a href="contact.html" class="header-btn1">
+                                    <img src="{{ asset('assets/img/icons/logo-icon1.svg') }}" alt="">
+
+                                    Schedule A Consulation</a>
+                                <a href="contact.html" class="header-btn1 btn2">
+                                    <img src="{{ asset('assets/img/icons/logo-icon1.svg') }}" alt="">
+                                    Contact Us</a>
+                            </div>
                         </div>
-                        <div class="space16"></div>
-                        <h4>John Smith</h4>
-                        <p>Founder & CEO</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="900">
-                    <div class="team-box text-center">
-                        <div class="team-img">
-                            <img src="{{ asset('assets/img/all-images/testimonial/testimonial-img11.png') }}" alt="Team Member" style="border-radius: 50%; width: 200px; height: 200px; object-fit: cover;">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-5">
+                            <div class="images2">
+                                <div class="img1 reveal">
+                                    <!-- <img src="{{ asset('assets/img/all-images/cta/cta-img1.png') }}" alt=""> -->
+                                    <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/cta/cta-img1.png"
+                                        alt="">
+                                </div>
+                                <div class="img2">
+                                    <img src="{{ asset('assets/img/elements/elements5.png') }}" alt="">
+                                </div>
+                            </div>
                         </div>
-                        <div class="space16"></div>
-                        <h4>Sarah Johnson</h4>
-                        <p>Operations Manager</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="team-box text-center">
-                        <div class="team-img">
-                            <img src="{{ asset('assets/img/all-images/testimonial/testimonial-img12.png') }}" alt="Team Member" style="border-radius: 50%; width: 200px; height: 200px; object-fit: cover;">
-                        </div>
-                        <div class="space16"></div>
-                        <h4>Mike Williams</h4>
-                        <p>Lead Technician</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="1100">
-                    <div class="team-box text-center">
-                        <div class="team-img">
-                            <img src="{{ asset('assets/img/all-images/testimonial/testimonial-img8.png') }}" alt="Team Member" style="border-radius: 50%; width: 200px; height: 200px; object-fit: cover;">
-                        </div>
-                        <div class="space16"></div>
-                        <h4>Emily Brown</h4>
-                        <p>Customer Support</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--===== TEAM AREA ENDS =======-->
+</div>
 @endsection
