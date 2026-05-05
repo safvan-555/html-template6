@@ -10,7 +10,7 @@
                     <p>We are dedicated to providing exceptional pool cleaning and maintenance services</p>
                     <div class="space24"></div>
                     <ul>
-                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/crystalcraftuae?igsh=MW40dm1jOXNnaTdqZA=="><i class="fa-brands fa-instagram"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
@@ -25,7 +25,7 @@
                         <li><a href="{{ url('/') }}">Home</a></li>
                         <li><a href="{{ route('services') }}">Service</a></li>
                         <li><a href="{{ route('about') }}">About Us</a></li>
-                        <li><a href="{{ route('blogs') }}">Latest News</a></li>
+                        <li><a href="{{ route('projects') }}">Latest Projects</a></li>
                         <li><a href="{{ route('contact') }}">Contact Us</a></li>
                     </ul>
                 </div>
@@ -35,12 +35,14 @@
                 <div class="footer-header pbleft2">
                     <h3>Other Links</h3>
                     <ul>
-                        <li><a href="#">Maintenance</a></li>
-                        <li><a href="#">Equipment</a></li>
-                        <li><a href="#">Swimming Service</a></li>
-                        <li><a href="#">Personal</a></li>
-                        <li><a href="#">Cleaner</a></li>
-                    </ul>
+            @foreach($moreServices as $service)
+                <li>
+                    <a  href="{{ route('service.show', $service->id) }}">
+                        {{ $service->card_heading }}
+                    </a>
+                </li>
+            @endforeach
+        </ul>
                 </div>
             </div>
 

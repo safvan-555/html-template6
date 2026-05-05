@@ -140,7 +140,7 @@
                                 <a href="#" ><i class="fa-brands fa-facebook-f" ></i></a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/crystalcraftuae?igsh=MW40dm1jOXNnaTdqZA=="><i class="fa-brands fa-instagram"></i></a>
                             </li>
                             <li>
                                 <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>

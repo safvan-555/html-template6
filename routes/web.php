@@ -12,6 +12,19 @@ use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\AboutUsPageController;
 use App\Http\Controllers\Admin\HomePageController; 
+use App\Models\ServiceItem;
+
+Route::get('/linkstorage', function () {
+    $target = storage_path('app/public');
+    $shortcut = public_path('storage');
+    
+    if (!File::exists($shortcut)) {
+        symlink($target, $shortcut);
+        return 'Symlink created successfully!';
+    }
+    return 'Symlink already exists.';
+});
+
 
 Route::get('/', [ProjectPageController::class, 'homepage'])->name('home');
 Route::get('/about', [ProjectPageController::class, 'aboutuspage'])->name('about');
@@ -38,7 +51,9 @@ Route::post('/newsletter/subscribe', function() {
 })->name('newsletter.subscribe');
 
 
-
+Route::get('/login', function () {
+    return redirect()->route('admin.login');
+})->name('login');
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::middleware('guest')->group(function () {
         Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
