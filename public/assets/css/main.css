@@ -2825,10 +2825,10 @@ ul.pagination li a {
   transition: all 0.4s;
   box-shadow: none;
   border: none;
-  height: 50px;
-  width: 50px;
+  /* height: 50px;
+  width: 50px; */
   text-align: center;
-  line-height: 40px;
+  /* line-height: 40px; */
   border-radius: 7px;
   background: var(--02-home-gray-colar, #F2F9FF);
   margin: 0 8px 0 0;
@@ -3027,11 +3027,11 @@ ul.pagination li a.active {
   display: inline-block;
 }
 .service-single-area .service-single-author .social-area ul li a {
-  height: 40px;
+   height: 40px;
   width: 40px;
-  text-align: center;
-  line-height: 40px;
-  display: inline-block;
+  display: flex;             
+  align-items: center;      
+  justify-content: center;    
   transition: all 0.4s;
   background: #EAF6FF;
   border-radius: 50%;
@@ -3701,7 +3701,7 @@ ul.pagination li a.active {
 .hero3-section-area {
   position: relative;
   z-index: 1;
-  background-image: url(../img/bg/header-bg2.png);
+  /* background-image: url(../img/bg/header-bg2.png); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4001,7 +4001,7 @@ ul.pagination li a.active {
   }
 }
 
-.inner-header-section-area {
+/* .inner-header-section-area {
   background-image: url(../img/bg/inner-bg1.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -4009,7 +4009,7 @@ ul.pagination li a.active {
   padding: 280px 0 80px;
   overflow: hidden;
   position: relative;
-}
+} */
 @media (max-width: 767px) {
   .inner-header-section-area {
     padding: 160px 0 60px;
@@ -11347,6 +11347,20 @@ body.homepage1-body, html {
   height: 52px;
   margin-bottom: 20px;
 }
+.contact3-section-area .contact-auhtor-boxarea .contact-form-area .input-area .select {
+  border: 1px solid #DEDDDB;
+  color: var(--ztc-text-text-4);
+  font-family: var(--ztc-family-font1);
+  font-size: var(--ztc-font-size-font-s18);
+  font-style: normal;
+  font-weight: var(--ztc-weight-medium);
+  line-height: 18px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 16px;
+  height: 52px;
+  margin-bottom: 20px;
+}
 .contact3-section-area .contact-auhtor-boxarea .contact-form-area .input-area input::-moz-placeholder {
   color: var(--ztc-text-text-4);
   font-family: var(--ztc-family-font1);
@@ -12385,7 +12399,7 @@ body.homepage1-body, html {
 .testimonial2-section-area {
   position: relative;
   z-index: 1;
-  background-image: url(../img/bg/testimonial-bg1.png);
+  /* background-image: url(../img/bg/testimonial-bg1.png); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

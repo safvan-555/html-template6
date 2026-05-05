@@ -14,11 +14,12 @@ class QuoteController extends Controller
             'name' => 'required|string|max:255',
             'phone' => 'required|string|max:20',
             'email' => 'required|email',
-            'message' => 'required|string',
+            'message' => 'string',
+            'service_name' => 'string',
         ]);
 
-        Mail::to('info@crystalcraftuae.com')->send(new QuoteRequestMail($validated));
-        // Mail::to('safvanvk555@gmail.com')->send(new QuoteRequestMail($validated));
+        // Mail::to('info@crystalcraftuae.com')->send(new QuoteRequestMail($validated));
+        Mail::to('safvanvk555@gmail.com')->send(new QuoteRequestMail($validated));
 
         return response()->json([
             'status' => true,

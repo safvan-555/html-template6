@@ -6,6 +6,17 @@
 @section('content')
 
 
+<style>
+.inner-header-section-area {
+    background-image: url('{{ asset('assets/img/bg/inner-bg1.png') }}') !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 280px 0 80px;
+    overflow: hidden;
+    position: relative;
+}
+</style>
 <!--===== HERO AREA STARTS =======-->
 <div class="inner-header-section-area">
     <div class="elements2">
@@ -19,7 +30,8 @@
             <div class="col-lg-4 m-auto">
                 <div class="inner-page-header heading1 text-center">
                     <h1>Contacts Us</h1>
-                    <a href="index.html">Home <i class="fa-solid fa-angle-right"></i> <span>Contacts Us</span></a>
+                    <a href="{{ route('home') }}">Home <i class="fa-solid fa-angle-right"></i> <span>Contacts
+                            Us</span></a>
                 </div>
             </div>
         </div>
@@ -95,7 +107,7 @@
 <div class="mapouter">
     <div class="gmap_canvas">
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4506257.120552435!2d88.67021924228865!3d21.954385721237916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1704088968016!5m2!1sen!2sbd"
+            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d115526.13981912327!2d55.26161058316742!3d25.19675120991686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sOffice%2082%2C%20Oud%20Al%20Muteena%203%20United%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1777827280774!5m2!1sen!2sin"
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
@@ -188,9 +200,7 @@
                         <div class="col-lg-5">
                             <div class="images2">
                                 <div class="img1 reveal">
-                                    <!-- <img src="{{ asset('assets/img/all-images/cta/cta-img1.png') }}" alt=""> -->
-                                    <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/cta/cta-img1.png"
-                                        alt="keyframe5">
+                                    <img src="{{ asset('assets/img/all-images/cta/cta-img1.png') }}" alt="">
                                 </div>
                                 <div class="img2">
                                     <img src="{{ asset('assets/img/elements/elements5.png') }}" alt="keyframe5">
@@ -219,7 +229,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const phone = document.getElementById('phone1').value;
             const email = document.getElementById('email1').value;
             const subject = document.getElementById('subject1').value;
-            const message= document.getElementById('message1').value;
+            const message = document.getElementById('message1').value;
 
             const formData = {
                 name: name,

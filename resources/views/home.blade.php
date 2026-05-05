@@ -1,26 +1,42 @@
 @extends('layouts.app')
 
-@section('title', 'Crystal Craft - Crystal Craft & Services')
+@section('title', $homeData->meta_title ?? 'Crystal Craft')
+@section('meta_description', $homeData->meta_description ?? '')
 @section('body-class', 'homepage3-body')
-
 @section('content')
-<!--===== HERO AREA STARTS =======-->
+<style>
+.testim {
+    background-image: url('{{ asset('storage/' . $homeData->testimonial_banner) }}') !important;
+}
+
+.section-area1 {
+    background-image: url('{{ asset('assets/img/bg/footer-bg2.png') }}') !important;
+}
+
+.hero3-section-area {
+    position: relative;
+    z-index: 1;
+    background-image: url('{{ asset('storage/' . $homeData->banner) }}');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 230px 0 130px;
+}
+</style>
 <div class="hero3-section-area">
     <div class="container">
         <div class="row">
             <div class="col-lg-5">
                 <div class="hero4-header heading5">
                     <h5 data-aos="fade-up" data-aos-duration="800">
-                        #01. Crystal Craft & Services
+                        {{ $homeData->banner_chip ?? 'Crystal Craft & Services' }}
                     </h5>
                     <h1 class="text-anime-style-3">
-                        Pool Maintenance For Crystal Clear Enjoyment!
+                        {{ $homeData->banner_heading ?? 'Pool Maintenance For Crystal Clear Enjoyment!' }}
                     </h1>
                     <div class="space16"></div>
                     <p data-aos="fade-up" data-aos-duration="1000">
-                        Trust us to handle the details so you can focus on what matters
-                        most enjoying your pool to the fullest. Experience the ultimate
-                        in pool cleanliness and care with Crystal Craft.
+                        {{ $homeData->banner_paragraph ?? '' }}
                     </p>
                     <div class="btn-area2" data-aos="fade-up" data-aos-duration="1200">
                         <a href="{{ route('contact') }}" class="header-btn3">
@@ -35,16 +51,14 @@
         </div>
     </div>
 </div>
-<!--===== HERO AREA ENDS =======-->
 
-<!--===== ABOUT AREA STARTS =======-->
 <div class="about3-section-area sp1">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="images reveal image-anime">
-                    <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/about/about-img3.png"
-                        alt="" />
+                    <img src="{{ asset('storage/' . $homeData->whychoose_card1_image) }}"
+                        alt="{{ $homeData->whychoose_heading }}">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -53,12 +67,10 @@
                         Why Choose Us Crystal Craft
                     </h5>
                     <h2 class="text-anime-style-3">
-                        Choosing Quality Why We're Your Top Pick
+                        {{ $homeData->whychoose_heading ?? '' }}
                     </h2>
                     <p data-aos="fade-left" data-aos-duration="1000">
-                        From routine maintenance to complex repairs, we handle every
-                        aspect of pool care with precision and care. Choose us for your
-                        pool needs & experience the difference that comes.
+                        {{ $homeData->whychoose_paragraph ?? '' }}
                     </p>
                     <div class="space32"></div>
                     <div data-aos="fade-left" data-aos-duration="1200">
@@ -71,368 +83,266 @@
         </div>
     </div>
 </div>
-<!--===== ABOUT AREA ENDS =======-->
 
-<!--===== SERVICE AREA STARTS =======-->
+
 <div class="service3-section-area sp1">
-    <img src="{{ asset('assets/img/elements/elements16.png') }}" alt="" class="elements16" />
-    <img src="{{ asset('assets/img/elements/elements17.png') }}" alt="" class="elements17" />
+    <img src="assets/img/elements/elements16.png" alt="" class="elements16">
+    <img src="assets/img/elements/elements17.png" alt="" class="elements17">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="service-boxes-area">
                     <div class="row">
-                        @php
-                        $services = [
-                        ['icon' => 'service-icon3.svg', 'title' => 'Seasonal Pool Prep', 'desc' => 'Experience the
-                        ultimate in pool cleanliness with our Crystal Clear Crystal Craft.'],
-                        ['icon' => 'service-icon4.svg', 'title' => 'Ultimate Pool Refresh', 'desc' => 'Ensuring
-                        sparkling clear water. Trust us to maintain a pristine environment.'],
-                        ['icon' => 'service-icon5.svg', 'title' => 'Precision Pool Repairs', 'desc' => 'Keep your pool
-                        safe and inviting with our Perfect Chemical Balancing.'],
-                        ['icon' => 'service-icon6.svg', 'title' => 'Algae-Free Assurance', 'desc' => 'Ensure your pool
-                        operates smoothly with our Expert Equipment Maintenance.']
-                        ];
-                        @endphp
-                        @foreach($services as $index => $service)
-                        <div class="col-lg-6 col-md-6" data-aos="zoom-in"
-                            data-aos-duration="{{ 800 + ($index * 100) }}">
+                        <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-duration="800">
                             <div class="service-boxarea">
                                 <div class="icons">
-                                    <img src="{{ asset('assets/img/icons/' . $service['icon']) }}" alt="" />
+                                    <img src="{{ asset('storage/' . $homeData->our_service_card1_image) }}"
+                                        alt="{{ $homeData->our_service_card1_heading }}">
                                 </div>
                                 <div class="space24"></div>
                                 <div class="content-area">
-                                    <a href="{{ route('services') }}">{{ $service['title'] }}</a>
+                                    <a href="#">{{ $homeData->our_service_card1_heading ?? '' }}</a>
                                     <div class="space16"></div>
-                                    <p>{{ $service['desc'] }}</p>
+                                    <p>{{ $homeData->our_service_card1_paragraph ?? '' }}</p>
                                     <div class="space24"></div>
-                                    <a href="{{ route('services') }}" class="readmore">
-                                        Read More <i class="fa-solid fa-arrow-right"></i>
-                                    </a>
+                                    <!-- <a href="#" class="readmore">Read More <i class="fa-solid fa-arrow-right"></i></a> -->
                                 </div>
                             </div>
-                            @if(!$loop->last && $loop->index < 1) <div class="space24">
+                            <div class="space24"></div>
                         </div>
-                        @endif
-                    </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
 
-        <div class="col-lg-6">
-            <div class="service3-header heading6">
-                <h5 data-aos="fade-left" data-aos-duration="800">
-                    Our Service Us Crystal Craft
-                </h5>
-                <h2 class="text-anime-style-3">
-                    Comprehensive Pool Care Luxury Pool Detailing
-                </h2>
-                <p data-aos="fade-left" data-aos-duration="1000">
-                    Indulge in the ultimate pool pampering with our Luxury Pool Detailing service.
-                    We offer meticulous cleaning, polishing, & aesthetic enhancements to make your pool a stunning.
-                </p>
-                <div class="space40"></div>
-                <div class="images reveal image-anime">
-                    <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/service/service-img3.png"
-                        alt="" />
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<!--===== SERVICE AREA ENDS =======-->
+                        <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-duration="900">
+                            <div class="service-boxarea">
+                                <div class="icons">
+                                    <img src="{{ asset('storage/' . $homeData->our_service_card2_image) }}"
+                                        alt="{{ $homeData->our_service_card2_heading }}">
+                                </div>
+                                <div class="space24"></div>
+                                <div class="content-area">
+                                    <a href="#">{{ $homeData->our_service_card2_heading ?? '' }}</a>
+                                    <div class="space16"></div>
+                                    <p>{{ $homeData->our_service_card1_paragraph ?? '' }}</p>
+                                    <div class="space24"></div>
+                                    <!-- <a href="#" class="readmore">Read More <i class="fa-solid fa-arrow-right"></i></a> -->
+                                </div>
+                            </div>
+                            <div class="space24"></div>
+                        </div>
 
-<!--===== PRICING AREA STARTS =======-->
-<!-- <div class="pricing-plan-section-area sp2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 m-auto">
-                    <div class="pricing-header heading6 text-center">
-                        <h5 data-aos="fade-left" data-aos-duration="800">
-                            Pricing Plan Crystal Craft
-                        </h5>
-                        <h2 class="text-anime-style-3">Affordable Pool Care Packages</h2>
-                        <p data-aos="fade-left" data-aos-duration="1000">
-                            Explore our options & choose the plan that’s right for you.
-                            Enjoy the peace of mind that comes with professional, reliable service at competitive rates.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 text-center">
-                    <div class="plan-toggle-wrap">
-                        <div class="toggle-inner">
-                            <input id="ce-toggle" checked="" type="checkbox" />
-                            <span class="custom-toggle"></span>
-                            <div class="t-month">
-                                <h4>Monthly</h4>
+                        <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-duration="1100">
+                            <div class="service-boxarea">
+                                <div class="icons">
+                                    <img src="{{ asset('storage/' . $homeData->our_service_card3_image) }}"
+                                        alt="{{ $homeData->our_service_card3_heading }}">
+                                </div>
+                                <div class="space24"></div>
+                                <div class="content-area">
+                                    <a href="#">{{ $homeData->our_service_card3_heading ?? '' }}</a>
+                                    <div class="space16"></div>
+                                    <p>{{ $homeData->our_service_card3_paragraph ?? '' }}</p>
+                                    <div class="space24"></div>
+                                    <!-- <a href="#" class="readmore">Read More <i class="fa-solid fa-arrow-right"></i></a> -->
+                                </div>
                             </div>
-                            <div class="t-year">
-                                <h4>Annual</h4>
-                            </div>
+                            <div class="space24 d-md-none d-block"></div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="tab-content">
-                        <div id="monthly">
-                            <div class="row">
-                                @php
-                                    $pricing = [
-                                        ['name' => 'Starter', 'price' => '$59', 'desc' => 'Discover our flexible and affordable pricing plans tailored to meet.'],
-                                        ['name' => 'Premium', 'price' => '$73', 'desc' => 'we understand that every pool is unique, which is why we offer.', 'active' => true],
-                                        ['name' => 'Standard', 'price' => '$60', 'desc' => 'Packages designed fit any budget & requirement comprehensive care.']
-                                    ];
-                                @endphp
-                                @foreach($pricing as $plan)
-                                    <div class="col-lg-4 col-md-6" data-aos="flip-right" data-aos-duration="800">
-                                        <div class="single-pricing-area {{ isset($plan['active']) && $plan['active'] ? 'active' : '' }}">
-                                            <div class="pricing-box">
-                                                <h3>{{ $plan['name'] }}</h3>
-                                                <div class="space16"></div>
-                                                <p>{{ $plan['desc'] }}</p>
-                                                <div class="space32"></div>
-                                                <h2>{{ $plan['price'] }} <span>/ Monthly </span></h2>
-                                            </div>
-                                            <div class="space32"></div>
-                                            <ul>
-                                                <li><img src="{{ asset('assets/img/icons/check-icon1.svg') }}" alt="" /> Installation of new device</li>
-                                                <li><img src="{{ asset('assets/img/icons/check-icon1.svg') }}" alt="" /> Repairs for all pool</li>
-                                                <li><img src="{{ asset('assets/img/icons/check-icon1.svg') }}" alt="" /> Water Quality Guarantee</li>
-                                            </ul>
-                                            <div class="space12"></div>
-                                            <div class="btn-area1">
-                                                <a href="{{ route('contact') }}" class="header-btn3">
-                                                    <img src="{{ asset('assets/img/icons/logo-icon3.svg') }}" alt="" /> Get Started
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            </div>
-                        </div>
-                        <div id="yearly" style="display: none">
-                            <div class="row">
-                                @php
-                                    $yearlyPricing = [
-                                        ['name' => 'Starter', 'price' => '$99'],
-                                        ['name' => 'Premium', 'price' => '$179', 'active' => true],
-                                        ['name' => 'Standard', 'price' => '$159']
-                                    ];
-                                @endphp
-                                @foreach($yearlyPricing as $plan)
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="single-pricing-area {{ isset($plan['active']) && $plan['active'] ? 'active' : '' }}">
-                                            <div class="pricing-box">
-                                                <h3>{{ $plan['name'] }}</h3>
-                                                <div class="space16"></div>
-                                                <p>Discover our flexible and affordable pricing plans tailored to meet.</p>
-                                                <div class="space32"></div>
-                                                <h2>{{ $plan['price'] }} <span>/ Monthly </span></h2>
-                                            </div>
-                                            <div class="space32"></div>
-                                            <ul>
-                                                <li><img src="{{ asset('assets/img/icons/check-icon1.svg') }}" alt="" /> Installation of new device</li>
-                                                <li><img src="{{ asset('assets/img/icons/check-icon1.svg') }}" alt="" /> Repairs for all pool</li>
-                                                <li><img src="{{ asset('assets/img/icons/check-icon1.svg') }}" alt="" /> Water Quality Guarantee</li>
-                                            </ul>
-                                            <div class="space12"></div>
-                                            <div class="btn-area1">
-                                                <a href="{{ route('contact') }}" class="header-btn3">
-                                                    <img src="{{ asset('assets/img/icons/logo-icon3.svg') }}" alt="" /> Get Started
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endforeach
+
+                        <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-duration="1200">
+                            <div class="service-boxarea">
+                                <div class="icons">
+                                    <img src="{{ asset('storage/' . $homeData->our_service_card4_image) }}"
+                                        alt="{{ $homeData->our_service_card4_heading }}">
+                                </div>
+                                <div class="space24"></div>
+                                <div class="content-area">
+                                    <a href="#">{{ $homeData->our_service_card4_heading ?? '' }}</a>
+                                    <div class="space16"></div>
+                                    <p>{{ $homeData->our_service_card4_paragraph ?? '' }}</p>
+                                    <div class="space24"></div>
+                                    <!-- <a href="#" class="readmore">Read More <i class="fa-solid fa-arrow-right"></i></a> -->
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div> -->
-<!--===== PRICING AREA ENDS =======-->
 
-<!--===== BRANDS AREA STARTS =======-->
-<div class="others3-section-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 m-auto">
-                <div class="heading6 text-center">
-                    <h3 class="text-anime-style-3">
-                        Join 4,000+ companies already growing
-                    </h3>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="brand-slider-area owl-carousel">
-                    @for($i = 1; $i <= 7; $i++) <div class="img1">
-                        <img src="{{ asset('assets/img/elements/brand' . $i . '.png') }}" alt="" />
-                </div>
-                @endfor
-            </div>
-            <div class="space32"></div>
-            <div class="brand-slider-area1 owl-carousel">
-                @for($i = 8; $i <= 10; $i++) <div class="img1">
-                    <img src="{{ asset('assets/img/elements/brand' . $i . '.png') }}" alt="" />
-            </div>
-            @endfor
-            <div class="img1">
-                <img src="{{ asset('assets/img/elements/brand7.png') }}" alt="" />
-            </div>
-            <div class="img1">
-                <img src="{{ asset('assets/img/elements/brand3.png') }}" alt="" />
-            </div>
-            <div class="img1">
-                <img src="{{ asset('assets/img/elements/brand6.png') }}" alt="" />
-            </div>
-            <div class="img1">
-                <img src="{{ asset('assets/img/elements/brand1.png') }}" alt="" />
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-
-<div class="video-images-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="images-area">
-                    <div class="image-anime reveal">
-                        <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/others/others-img1.png"
-                            alt="" />
-                    </div>
-                    <div class="play-btn">
-                        <a href="https://www.youtube.com/watch?v=Y8XpQpW5OVY" class="popup-youtube">
-                            <i class="fa-solid fa-play fa-fw"></i>
-                        </a>
-                    </div>
-                    <div class="text">
-                        <a href="https://www.youtube.com/watch?v=Y8XpQpW5OVY" class="popup-youtube">
-                            Watch Our Working Video
-                        </a>
+            <div class="col-lg-6">
+                <div class="service3-header heading6">
+                    <h5 data-aos="fade-left" data-aos-duration="800">Our Service Us Poolwash</h5>
+                    <h2 class="text-anime-style-3"> {{ $homeData->our_service_heading ?? '' }}</h2>
+                    <p data-aos="fade-left" data-aos-duration="1000">{{ $homeData->our_service_paragraph ?? '' }}</p>
+                    <div class="space40"></div>
+                    <div class="images reveal image-anime">
+                        <img src="{{ asset('storage/' . $homeData->our_service_image) }}"
+                            alt="{{ $homeData->our_service_heading }}">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!--===== BRANDS AREA ENDS =======-->
 
-<!--=====TESTIMONIAL START=======-->
-<div class="tes2 sp1">
+
+
+<div class="work1-section-area sp1">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 m-auto">
-                <div class="heading6 text-center">
-                    <h5 data-aos="fade-right" data-aos-duration="800">
-                        Testimonial Crystal Craft
-                    </h5>
-                    <h2 class="text-anime-style-3">
-                        Customer Reviews Words Of Praise
-                    </h2>
-                    <p data-aos="fade-right" data-aos-duration="1100">
-                        These testimonials reflect our commitment to excellence & our dedication to making
-                        every pool a pristine and enjoyable retreat. Experience the difference
-                    </p>
+            <div class="col-lg-6">
+                <div class="work-header heading2">
+                    <h5 data-aos="fade-right" data-aos-duration="800">Latest Work Poolwash</h5>
+                    <h2 class="text-anime-style-3"> {{ $homeData->latest_work_heading ?? '' }}</h2>
+                    <p data-aos="fade-right" data-aos-duration="1000">{{ $homeData->latest_work_paragraph ?? '' }}</p>
                 </div>
             </div>
         </div>
-
-        <div class="space60"></div>
         <div class="row">
             <div class="col-lg-12">
-                <div class="tes2-solider-parent" data-aos="fade-up" data-aos-duration="700">
-                    @php
-                    $testimonials = [
-                    ['name' => 'Matthew C. Lansberry', 'role' => 'Pool Owner', 'img' =>
-                    'https://html.vikinglab.agency/poolwash/assets/img/all-images/testimonial/testimonial-img7.png'],
-                    ['name' => 'Heinrich Kaasen', 'role' => 'Amazing Pool Owner', 'img' =>
-                    'https://html.vikinglab.agency/poolwash/assets/img/all-images/testimonial/testimonial-img11.png'],
-                    ['name' => 'Keshav Maharaj', 'role' => 'Green Pool Owner', 'img' =>
-                    'https://html.vikinglab.agency/poolwash/assets/img/all-images/testimonial/testimonial-img12.png']
-                    ];
-                    @endphp
-                    @foreach($testimonials as $testimonial)
-                    <div class="tes2-parent-slider">
-                        <div class="row align-items-center">
-                            <div class="col-lg-5">
-                                <div class="big-img">
-                                    <div class="tes2-big-image img100 image-anime reveal">
-                                        <!-- <img src="{{ asset('assets/img/all-images/testimonial/' . $testimonial['img']) }}" alt="" /> -->
-                                        <img src="{{ $testimonial['img'] }}" alt="" />
-                                    </div>
-                                </div>
+                <div class="work-slider-area owl-carousel">
+
+
+                    @foreach($moreProjects as $project)
+                    <div class="work-boxarea">
+                        <div class="img1 image-anime reveal">
+                            <img src="{{ asset('storage/' . $project->card_image) }}" alt="{{ $project->heading }}">
+                        </div>
+                        <div class="content-area">
+                            <div class="icons">
+                                <a href="#"><img src="assets/img/icons/arrow1.svg" alt=""></a>
                             </div>
-                            <div class="col-lg-7">
-                                <div class="haddings">
-                                    <div class="quito">
-                                        <img src="{{ asset('assets/img/icons/quito3.svg') }}" alt="" />
-                                    </div>
-                                    <div class="hadding">
-                                        <div class="star">
-                                            <ul>
-                                                @for($i = 0; $i < 5; $i++) <li><i class="fa-solid fa-star"></i></li>
-                                                    @endfor
-                                            </ul>
-                                        </div>
-                                        <div class="space32"></div>
-                                        <p>
-                                            "I should be incapable of drawing a single stroke at the present moment;
-                                            and yet I feel that I never was a greater artist than now. The lovely valley
-                                            teems with vapour around me, and the meridian sun strikes the upper surface
-                                            and but a few stray into the inner sanctuary, Although we are maritime
-                                            lawyers."
-                                        </p>
-                                        <div class="space32"></div>
-                                        <div class="tes-hadding">
-                                            <h4><a href="#">{{ $testimonial['name'] }}</a></h4>
-                                            <div class="space6"></div>
-                                            <p>{{ $testimonial['role'] }}</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="space24"></div>
+                            <p>{{ $project->service->name ?? 'Cleaning & Services' }}</p>
+                            <div class="space16"></div>
+                            <a href="#">{{ $project->heading }}</a>
+                            <div class="img2">
+                                <img src="assets/img/elements/elements9.png" alt="">
                             </div>
                         </div>
                     </div>
                     @endforeach
-                </div>
-            </div>
-        </div>
 
-        <div class="space80"></div>
-        <div class="row">
-            <div class="tes2-slider-bottom">
-                @foreach($testimonials as $index => $testimonial)
-                <div class="tes2-bottom">
-                    <div class="img50 img">
-                        <!-- <img src="{{ asset('assets/img/all-images/testimonial/testimonial-img' . (8 + $index) . '.png') }}" alt="" /> -->
-                        <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/testimonial/testimonial-img{{ 8 + $index }}.png"
-                            alt="" />
-                    </div>
-                    <div class="bottom-hadding">
-                        <h4><a href="#">{{ $testimonial['name'] }}</a></h4>
-                        <div class="space5"></div>
-                        <p>{{ $testimonial['role'] }}</p>
-                    </div>
                 </div>
-                @endforeach
             </div>
         </div>
     </div>
 </div>
-<!--=====TESTIMONIAL END=======-->
 
-<!--===== CONTACT AREA STARTS =======-->
+
+
+
+<div class="counter-section-area sp2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-6" data-aos="fade-up" data-aos-duration="800">
+                <div class="counter-box">
+                    <div class="icons">
+                        <img src="assets/img/icons/counter-icon1.svg" alt="">
+                    </div>
+
+                    <div class="space32"></div>
+                    <div class="text heading7">
+                        <h2><span class="counter">{{ $homeData->counter1 ?? '' }}</span>+</h2>
+                        <p>{{ $homeData->counter1_heading ?? '' }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1 d-lg-block d-none"></div>
+            <div class="col-lg-3 col-6" data-aos="fade-up" data-aos-duration="1000">
+                <div class="counter-box">
+                    <div class="icons">
+                        <img src="assets/img/icons/counter-icon2.svg" alt="">
+                    </div>
+                    <div class="space32"></div>
+                    <div class="text heading7">
+                        <h2><span class="counter">{{ $homeData->counter2 ?? '' }}</span>+</h2>
+                        <p>{{ $homeData->counter2_heading ?? '' }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-6" data-aos="fade-up" data-aos-duration="1200">
+                <div class="counter-box">
+                    <div class="icons">
+                        <img src="assets/img/icons/counter-icon3.svg" alt="">
+                    </div>
+                    <div class="space32"></div>
+                    <div class="text heading7">
+                        <h2><span class="counter">{{ $homeData->counter3 ?? '' }}</span>+</h2>
+                        <p>{{ $homeData->counter3_heading ?? '' }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-6" data-aos="fade-up" data-aos-duration="1400">
+                <div class="counter-box">
+                    <div class="icons">
+                        <img src="assets/img/icons/counter-icon4.svg" alt="">
+                    </div>
+                    <div class="space32"></div>
+                    <div class="text heading7">
+                        <h2><span class="counter">{{ $homeData->counter4 ?? '' }}</span>+</h2>
+                        <p>{{ $homeData->counter4_heading ?? '' }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="testimonial2-section-area sp1 testim">
+    <img src="assets/img/elements/elements13.png" alt="" class="elements13">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="testimonial-header heading4">
+                    <h5>Testimonial Poolwash</h5>
+                    <h2>{{ $homeData->testimonial_heading ?? '' }}</h2>
+                    <p>{{ $homeData->testimonial_paragraph ?? '' }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="testimonial2-slider-area owl-carousel">
+
+                    @foreach($moreTestimonials as $testim)
+                    <div class="testimonial-boxarea">
+                        <div class="author-imges">
+                            <div class="img1">
+                                <img src="{{ asset('storage/' . $testim->profile) }}" alt="{{ $testim->name }}">
+                            </div>
+                            <div class="content">
+                                <a href="#">{{ $testim->name ?? '' }}</a>
+                                <p>{{ $testim->designation ?? '' }}</p>
+                            </div>
+                        </div>
+                        <div class="space48"></div>
+                        <div class="main-content-area heading4">
+                            <ul>
+                                @for ($i = 1; $i <= 5; $i++) <li>
+                                    <i class="fa-solid fa-star{{ $i <= ($testim->rating ?? 0) ? '' : '-o' }}"></i>
+                                    </li>
+                                    @endfor
+                            </ul>
+                            <div class="space16"></div>
+                            <p>
+                            <p>{{ $testim->paragraph ?? '' }}</p>
+                            </p>
+                        </div>
+                        <div class="quito">
+                            <img src="assets/img/icons/quito2.svg" alt="">
+                        </div>
+                    </div>
+                    @endforeach
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <div class="contact3-section-area sp1">
     <img src="{{ asset('assets/img/elements/elements16.png') }}" alt="" class="elements16" />
     <img src="{{ asset('assets/img/elements/elements16.png') }}" alt="" class="elements17" />
@@ -441,10 +351,9 @@
             <div class="col-lg-8 m-auto">
                 <div class="contact-heading heading6 text-center">
                     <h5>Contact Us Crystal Craft</h5>
-                    <h2>Have Questions Reach Out Experts</h2>
+                    <h2>{{ $homeData->contactus_heading ?? '' }}</h2>
                     <p>
-                        We're here to assist you with all your pool care needs. Whether you have a question
-                        about our services, need expert advice on maintaining your pool,
+                        {{ $homeData->contactus_paragraph ?? '' }}
                     </p>
                 </div>
             </div>
@@ -458,48 +367,60 @@
                             <div class="contact-form-area">
                                 <h3>Send Us A Message</h3>
                                 <p>Our response time is within 30 minutes during business hours</p>
-                                <form method="POST" action="{{ route('contact.submit') }}">
+                                <form id="quoteForm5">
                                     @csrf
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="input-area">
-                                                <input type="text" name="first_name" placeholder="First Name"
+                                                <input type="text" name="name" id="name" placeholder="Name" required />
+                                            </div>
+                                        </div>
+                                        <!-- <div class="col-lg-6">
+                                            <div class="input-area">
+                                                <input type="text" name="last_name" placeholder="Last Name" required />
+                                            </div>
+                                        </div> -->
+                                        <div class="col-lg-6">
+                                            <div class="input-area">
+                                                <input type="tel" name="phone" id="phone" placeholder="Phone Number"
                                                     required />
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="input-area">
-                                                <input type="text" name="last_name" placeholder="Last Name" required />
+                                                <input type="email" name="email" id="email" placeholder="Email Address"
+                                                    required />
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="input-area">
-                                                <input type="tel" name="phone" placeholder="Phone Number" required />
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="input-area">
-                                                <input type="email" name="email" placeholder="Email Address" required />
+                                                {{-- Dynamic Service Dropdown --}}
+                                                <select name="service_type" id="service_type" class="select" required>
+                                                    <option value="">Select a Service</option>
+                                                    @foreach($moreServices as $service)
+                                                    <option value="{{ $service->card_heading }}">
+                                                        {{ $service->card_heading }}
+                                                    </option>
+                                                    @endforeach
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="input-area">
-                                                <input type="text" name="service_type" placeholder="Service Type" />
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="input-area">
-                                                <textarea name="message" placeholder="Message" required></textarea>
+                                                <textarea name="message" name="message" placeholder="Message"
+                                                    required></textarea>
                                             </div>
                                         </div>
                                         <div class="space30"></div>
                                         <div class="col-lg-12">
                                             <div class="input-area">
-                                                <button type="submit" class="header-btn3">
+                                                <button type="submit" id="submitBtn" class="header-btn3">
                                                     <img src="{{ asset('assets/img/icons/logo-icon3.svg') }}" alt="" />
                                                     Submit Now
                                                 </button>
                                             </div>
+                                        </div>
+                                        <div id="formMessage" class="col-lg-12" style="display:none; margin-top:15px;">
                                         </div>
                                     </div>
                                 </form>
@@ -545,106 +466,17 @@
         </div>
     </div>
 </div>
-<!--===== CONTACT AREA ENDS =======-->
 
-<!--===== BLOG AREA STARTS =======-->
-<div class="blog3-section-area sp2">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5">
-                <div class="blog-header">
-                    <div class="heading6">
-                        <h5 data-aos="fade-right" data-aos-duration="800">
-                            Our Blog Crystal Craft
-                        </h5>
-                        <h2 class="text-anime-style-3">
-                            The Benefits Of Regular Crystal Craft
-                        </h2>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2"></div>
-            <div class="col-lg-5">
-                <div class="heading6">
-                    <p>
-                        Welcome to 'The Ultimate Guide to Pool Maintenance', your comprehensive resource for keeping
-                        your pool in pristine condition all year round.
-                    </p>
-                    <div class="space24"></div>
-                    <div class="btn-area2">
-                        <a href="{{ route('blogs') }}" class="header-btn3">
-                            <img src="{{ asset('assets/img/icons/logo-icon3.svg') }}" alt="" /> Read More Blog
-                        </a>
-                    </div>
-                </div>
-                <div class="space60 d-lg-none d-block"></div>
-            </div>
-        </div>
-        <div class="row">
-            @php
-            $blogs = [
-            ['title' => 'Pool Safety 101: Essential Tips for a Safe Swimming Environment', 'desc' => 'Closing your pool
-            properly for the winter is crucial to protecting it from damage.', 'img' =>
-            'https://html.vikinglab.agency/poolwash/assets/img/all-images/blog/blog-img1.png'],
-            ['title' => 'Revamp Your Backyard Oasis: Stunning Pool Renovation Ideas', 'desc' => 'Discover the latest
-            trends in pool design and renovation, from innovative lighting', 'img' =>
-            'https://html.vikinglab.agency/poolwash/assets/img/all-images/blog/blog-img2.png'],
-            ['title' => 'Professional Pool Maintenance: What\'s Right for You?', 'desc' => 'Helping you understand how
-            to balance pH, chlorine, and other essential elements', 'img' =>
-            'https://html.vikinglab.agency/poolwash/assets/img/all-images/blog/blog-img3.png']
-            ];
-            @endphp
-            @foreach($blogs as $index => $blog)
-            <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="{{ 800 + ($index * 200) }}">
-                <div class="blog-boxarea">
-                    <div class="img1 image-anime">
-                        <!-- <img src="{{ asset('assets/img/all-images/blog/' . $blog['img']) }}" alt="" /> -->
-                        <img src="{{ $blog['img'] }}" alt="" />
 
-                    </div>
-                    <div class="date">
-                        <a href="#">20 <br /> Jun</a>
-                    </div>
-                    <div class="content-area">
-                        <ul>
-                            <li><a href="#" class="tag"># Crystal Craft</a></li>
-                        </ul>
-                        <div class="space16"></div>
-                        <a href="#">{{ $blog['title'] }}</a>
-                        <div class="space16"></div>
-                        <p>{{ $blog['desc'] }}</p>
-                        <div class="space24"></div>
-                        <a href="#" class="readmore">
-                            Read More <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</div>
-<!--===== BLOG AREA ENDS =======-->
-
-<!--===== CTA AREA STARTS =======-->
-<div class="cta3-section-area">
+<div class="cta3-section-area section-area1">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-12">
                 <div class="cta-main-area">
-                    <!-- <img src="{{ asset('assets/img/all-images/cta/cta-img2.png') }}" alt="" class="cta-img2" />
-                        <img src="{{ asset('assets/img/all-images/cta/cta-img3.png') }}" alt="" class="cta-img3" />
-                        <img src="{{ asset('assets/img/all-images/cta/cta-img4.png') }}" alt="" class="cta-img4" />
-                        <img src="{{ asset('assets/img/all-images/cta/cta-img5.png') }}" alt="" class="cta-img5" /> -->
-
-                    <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/cta/cta-img2.png" alt=""
-                        class="cta-img2" />
-                    <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/cta/cta-img3.png" alt=""
-                        class="cta-img3" />
-                    <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/cta/cta-img4.png" alt=""
-                        class="cta-img4" />
-                    <img src="https://html.vikinglab.agency/poolwash/assets/img/all-images/cta/cta-img5.png" alt=""
-                        class="cta-img5" />
+                    <img src="{{ asset('assets/img/all-images/cta/cta-img2.png') }}" alt="" class="cta-img2" />
+                    <img src="{{ asset('assets/img/all-images/cta/cta-img3.png') }}" alt="" class="cta-img3" />
+                    <img src="{{ asset('assets/img/all-images/cta/cta-img4.png') }}" alt="" class="cta-img4" />
+                    <img src="{{ asset('assets/img/all-images/cta/cta-img5.png') }}" alt="" class="cta-img5" />
 
                     <div class="row">
                         <div class="col-lg-5 m-auto">
@@ -673,12 +505,10 @@
         </div>
     </div>
 </div>
-<!--===== CTA AREA ENDS =======-->
 @endsection
 
 @push('scripts')
 <script>
-// Pricing toggle functionality
 document.addEventListener('DOMContentLoaded', function() {
     const toggle = document.getElementById('ce-toggle');
     const monthlyDiv = document.getElementById('monthly');
@@ -697,4 +527,72 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const quoteForm5 = document.getElementById('quoteForm5');
+    const submitBtn = document.getElementById('submitBtn');
+    const formMessage = document.getElementById('formMessage');
+    const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
+    if (quoteForm5) {
+        quoteForm5.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<img src="{{ asset('
+            assets / img / icons / logo - icon3.svg ') }}" alt="" /> Submitting...';
+            formMessage.style.display = 'none';
+            formMessage.innerHTML = '';
+
+            const formData = {
+                name: quoteForm5.querySelector('input[name="name"]').value,
+                phone: quoteForm5.querySelector('input[name="phone"]').value,
+                email: quoteForm5.querySelector('input[name="email"]').value,
+                service_name: quoteForm5.querySelector('select[name="service_type"]').value,
+                message: quoteForm5.querySelector('textarea[name="message"]').value,
+            };
+
+            try {
+                const response = await fetch('/quote', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': csrfToken,
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    formMessage.style.display = 'block';
+                    formMessage.innerHTML = '<div class="alert alert-success">' + (result.message ||
+                        'Form submitted successfully!') + '</div>';
+                    quoteForm5.reset();
+                } else {
+                    formMessage.style.display = 'block';
+                    let errorMsg = result.message || 'Something went wrong. Please try again.';
+                    if (result.errors) {
+                        errorMsg = Object.values(result.errors).flat().join('<br>');
+                    }
+                    formMessage.innerHTML = '<div class="alert alert-danger">' + errorMsg +
+                        '</div>';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                formMessage.style.display = 'block';
+                formMessage.innerHTML =
+                    '<div class="alert alert-danger">Network error. Please check your connection and try again.</div>';
+            } finally {
+                submitBtn.disabled = false;
+                // Fixed the string concatenation for the asset URL
+                submitBtn.innerHTML = '<img src="{{ asset('
+                assets / img / icons / logo - icon3.svg ') }}" alt="" /> Submit Now';
+            }
+        });
+    }
+});
+</script>
+
 @endpush

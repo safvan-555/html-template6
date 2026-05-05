@@ -264,19 +264,19 @@
                 <div class="form-group">
                     <div class="input-icon">
                         <i class="fas fa-user"></i>
-                        <input type="text" id="name" name="name" placeholder="John Carter" required>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-icon">
                         <i class="fas fa-phone-alt"></i>
-                        <input type="tel" id="phone" name="phone" placeholder="+971 50 123 4567" required>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-icon">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" id="email" name="email" placeholder="hello@crystalcraft.com" required>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
                     </div>
                 </div>
                 <div class="form-group">

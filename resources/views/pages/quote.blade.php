@@ -4,6 +4,17 @@
 @section('body-class', 'homepage3-body')
 
 @section('content')
+<style>
+    .inner-header-section-area {
+  background-image: url(../img/bg/inner-bg1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 280px 0 80px;
+  overflow: hidden;
+  position: relative;
+}
+</style>
     <!--===== BREADCRUMB AREA STARTS =======-->
     <div class="breadcrumb-section-area" style="background: #f5f5f5; padding: 120px 0 60px 0;">
         <div class="container">
