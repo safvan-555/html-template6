@@ -5,7 +5,6 @@
 @section('body-class', 'homepage3-body')
 @section('content')
 
-banner
 <style>
 .inner-header-section-area {
     background-image: url('{{ asset('storage/' . $aboutData->banner) }}');

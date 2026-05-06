@@ -24,11 +24,11 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
          View::composer('*', function ($view) {
-        $moreServices = ServiceItem::orderBy('created_at', 'desc')
+        $ourServices = ServiceItem::orderBy('created_at', 'desc')
             ->limit(4)
             ->get();
 
-        $view->with('moreServices', $moreServices);
+        $view->with('ourServices', $ourServices);
     });
     }
 }

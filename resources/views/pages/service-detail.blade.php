@@ -16,6 +16,7 @@
     overflow: hidden;
     position: relative;
 }
+
 .service-inner-section-area .service-boxarea .img1 img {
     width: 100% !important;
     height: auto !important;
@@ -24,10 +25,11 @@
     border-radius: 8px;
     transition: all 0.4s;
 }
+
 .service-inner-section-area .service-boxarea .content-area .icons img {
-  filter: brightness(0) invert(1);
-  transition: all 0.4s;
-  margin-top:12px
+    filter: brightness(0) invert(1);
+    transition: all 0.4s;
+    margin-top: 12px
 }
 </style>
 
@@ -136,11 +138,12 @@
                         <h3>Follow Us</h3>
                         <div class="space24"></div>
                         <ul>
-                            <li >
-                                <a href="#" ><i class="fa-brands fa-facebook-f" ></i></a>
+                            <li>
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/crystalcraftuae?igsh=MW40dm1jOXNnaTdqZA=="><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/crystalcraftuae?igsh=MW40dm1jOXNnaTdqZA=="><i
+                                        class="fa-brands fa-instagram"></i></a>
                             </li>
                             <li>
                                 <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -152,9 +155,16 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-8">
                 <div class="single-section-area heading2 padding-right">
-                    {!! $service->description !!}
+                    <div class="img1 image-anime reveal">
+                        <img style="width:100%;height:auto" src="{{ asset('storage/' . $service->card_banner) }}"
+                            alt="{{ $service->card_heading }}" class="elements15" />
+                    </div>
+                    <div style="width:100%;padding-top:30px">
+                        {!! $service->description !!}
+                    </div>
                 </div>
             </div>
         </div>
@@ -185,11 +195,14 @@
                     </div>
                     <div class="content-area">
                         <div class="icons">
-                            <img src="{{ $relatedService->card_icon ? asset('storage/' . $relatedService->card_icon) : asset('assets/img/icons/service-icon10.svg') }}" alt="">
+                            <img src="{{ $relatedService->card_icon ? asset('storage/' . $relatedService->card_icon) : asset('assets/img/icons/service-icon10.svg') }}"
+                                alt="">
                         </div>
-                        <a href="{{ route('service.show', $relatedService->id) }}">{{ $relatedService->card_heading }}</a>
+                        <a
+                            href="{{ route('service.show', $relatedService->id) }}">{{ $relatedService->card_heading }}</a>
                         <div class="space16"></div>
-                        <p>{{ Str::limit($relatedService->card_description ?? $relatedService->card_description, 100) }}</p>
+                        <p>{{ Str::limit($relatedService->card_description ?? $relatedService->card_description, 100) }}
+                        </p>
                         <div class="space24"></div>
                         <a href="{{ route('service.show', $relatedService->id) }}" class="readmore">Read More <i
                                 class="fa-solid fa-arrow-right"></i></a>
@@ -234,7 +247,7 @@
                         <div class="col-lg-5">
                             <div class="images2">
                                 <div class="img1 reveal">
-                                 <img src="{{ asset('assets/img/all-images/cta/cta-img1.png') }}" alt="">
+                                    <img src="{{ asset('assets/img/all-images/cta/cta-img1.png') }}" alt="">
                                 </div>
                                 <div class="img2">
                                     <img src="{{ asset('assets/img/elements/elements5.png') }}" alt="keyframe5" />
@@ -254,7 +267,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('quoteForm2');
-   
+
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
         const btn = document.getElementById('quoteSubmitBtn');

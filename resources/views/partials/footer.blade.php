@@ -35,7 +35,7 @@
                 <div class="footer-header pbleft2">
                     <h3>Other Links</h3>
                     <ul>
-            @foreach($moreServices as $service)
+            @foreach($ourServices as $service)
                 <li>
                     <a  href="{{ route('service.show', $service->id) }}">
                         {{ $service->card_heading }}

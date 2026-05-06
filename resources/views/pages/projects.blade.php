@@ -56,10 +56,12 @@
                     </div>
                     <div class="text-area">
                         <p>{{ $project->service->name ?? 'Cleaning & Services' }}</p>
-                        <a href="{{ route('project.show', $project->id) }}">{{ $project->heading }}</a>
+                        <!-- <a href="{{ route('project.show', $project->id) }}"><i class="fa-solid fa-arrow-right"></i></a> -->
+                        <a href="#">{{ $project->heading }}</a>
                     </div>
                     <div class="arrow">
-                        <a href="{{ route('project.show', $project->id) }}"><i class="fa-solid fa-arrow-right"></i></a>
+                        <!-- <a href="{{ route('project.show', $project->id) }}"><i class="fa-solid fa-arrow-right"></i></a> -->
+                        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
