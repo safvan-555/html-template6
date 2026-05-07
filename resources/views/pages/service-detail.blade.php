@@ -142,7 +142,8 @@
                                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://www.instagram.com/crystalcraftuae?igsh=MW40dm1jOXNnaTdqZA=="><i
+                                <a target="_blank"
+                                    href="https://www.instagram.com/crystalcraftuae?igsh=MW40dm1jOXNnaTdqZA=="><i
                                         class="fa-brands fa-instagram"></i></a>
                             </li>
                             <li>
@@ -232,11 +233,11 @@
                                     Ready to experience the best in pool care? Don’t wait! Get
                                     your free quote today and see how we can transform.
                                 </p>
-                                <a href="contact.html" class="header-btn1">
+                                <a href="{{ route('contact') }}" class="header-btn1">
                                     <img src="{{ asset('assets/img/icons/logo-icon1.svg') }}" alt="" />
 
                                     Schedule A Consulation</a>
-                                <a href="contact.html" class="header-btn1 btn2">
+                                <a href="{{ route('contact') }}" class="header-btn1 btn2">
 
                                     <img src="{{ asset('assets/img/icons/logo-icon1.svg') }}" alt="" />
 

@@ -87,11 +87,11 @@
                                 <h2 class="text-anime-style-3">Make Your Pool Sparkle Reach Out Today</h2>
                                 <p>Ready to experience the best in pool care? Don’t wait! Get your free quote today and
                                     see how we can transform.</p>
-                                <a href="contact.html" class="header-btn1">
+                                <a href="{{ route('contact') }}" class="header-btn1">
                                     <img src="{{ asset('assets/img/icons/logo-icon1.svg') }}" alt="">
 
                                     Schedule A Consulation</a>
-                                <a href="contact.html" class="header-btn1 btn2">
+                                <a href="{{ route('contact') }}" class="header-btn1 btn2">
                                     <img src="{{ asset('assets/img/icons/logo-icon1.svg') }}" alt="">
                                     Contact Us</a>
                             </div>
