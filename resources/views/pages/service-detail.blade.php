@@ -142,7 +142,7 @@
                                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/crystalcraftuae?igsh=MW40dm1jOXNnaTdqZA=="><i
+                                <a target="_blank" href="https://www.instagram.com/crystalcraftuae?igsh=MW40dm1jOXNnaTdqZA=="><i
                                         class="fa-brands fa-instagram"></i></a>
                             </li>
                             <li>
@@ -260,8 +260,6 @@
         </div>
     </div>
 </div>
-@endsection
-
 
 
 <script>
@@ -319,3 +317,4 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 });
 </script>
+@endsection

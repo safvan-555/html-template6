@@ -10,10 +10,10 @@
                     <p>We are dedicated to providing exceptional pool cleaning and maintenance services</p>
                     <div class="space24"></div>
                     <ul>
-                        <li><a href="https://www.instagram.com/crystalcraftuae?igsh=MW40dm1jOXNnaTdqZA=="><i class="fa-brands fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/crystalcraftuae?igsh=MW40dm1jOXNnaTdqZA=="><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa-brands fa-twitter"></i></a></li>
                     </ul>
                 </div>
             </div>

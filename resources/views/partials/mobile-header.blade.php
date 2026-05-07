@@ -73,10 +73,10 @@
                         <h3>Social Links</h3>
                         <div class="social-links-mobile-menu">
                             <ul>
-                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="https://www.instagram.com/crystalcraftuae?igsh=MW40dm1jOXNnaTdqZA=="><i class="fa-brands fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                                <li><a target="_blank" href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a target="_blank" href="https://www.instagram.com/crystalcraftuae?igsh=MW40dm1jOXNnaTdqZA=="><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a target="_blank" href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                <li><a target="_blank" href="#"><i class="fa-brands fa-youtube"></i></a></li>
                             </ul>
                         </div>
                     </div>
