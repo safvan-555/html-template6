@@ -208,7 +208,10 @@
                         </div>
                         <div class="content-area">
                             <div class="icons">
-                                <a href="#"><img src="assets/img/icons/arrow1.svg" alt=""></a>
+                                <a href="javascript:void(0);" class="open-image-modal"
+                                    data-image="{{ asset('storage/' . $project->card_image) }}"
+                                    data-caption="{{ $project->heading }}" data-project-id="{{ $project->id }}">
+                                    <img src="{{ asset('assets/img/icons/arrow1.svg') }}"></a>
                             </div>
                             <div class="space24"></div>
                             <p>{{ $project->service->name ?? 'Cleaning & Services' }}</p>
@@ -505,6 +508,21 @@
         </div>
     </div>
 </div>
+
+
+
+<div id="imageModal" class="image-modal">
+    <div class="modal-content-wrapper">
+        <span class="modal-close">&times;</span>
+        <div class="modal-image-container">
+            <img id="modalImage" src="" alt="Enlarged Project Image">
+        </div>
+        <div class="modal-caption" id="modalCaption"></div>
+    </div>
+</div>
+
+
+
 @endsection
 
 @push('scripts')
@@ -592,6 +610,112 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+});
+</script>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all modal elements
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const modalCaption = document.getElementById('modalCaption');
+    const closeBtn = document.querySelector('.modal-close');
+
+    let currentImageSrc = '';
+    let currentCaption = '';
+
+    // Function to open modal with specific image
+    function openModal(imageSrc, caption) {
+        if (!imageSrc) return;
+
+        currentImageSrc = imageSrc;
+        currentCaption = caption;
+
+        // Clear previous image and show loading
+        modalImg.style.opacity = '0';
+        modalImg.src = '';
+        modalCaption.textContent = 'Loading...';
+
+        // Display modal
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+
+        // Load new image
+        const tempImg = new Image();
+        tempImg.onload = function() {
+            modalImg.src = imageSrc;
+            modalCaption.textContent = caption;
+            modalImg.style.opacity = '1';
+
+            // Remove loader if exists
+            const loader = modal.querySelector('.modal-loading');
+            if (loader) {
+                loader.remove();
+            }
+        };
+
+        tempImg.onerror = function() {
+            modalCaption.textContent = 'Failed to load image';
+            const loader = modal.querySelector('.modal-loading');
+            if (loader) {
+                loader.remove();
+            }
+        };
+
+        tempImg.src = imageSrc;
+
+        // Add loading animation
+        if (!modal.querySelector('.modal-loading')) {
+            const loader = document.createElement('div');
+            loader.className = 'modal-loading';
+            modal.querySelector('.modal-content-wrapper').appendChild(loader);
+        }
+    }
+
+    // Close modal function
+    function closeModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        modalImg.src = '';
+        modalCaption.textContent = '';
+
+        // Remove loader if exists
+        const loader = modal.querySelector('.modal-loading');
+        if (loader) {
+            loader.remove();
+        }
+    }
+
+    // Add click event listeners to all open buttons
+    document.querySelectorAll('.open-image-modal').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const imageSrc = this.getAttribute('data-image');
+            const caption = this.getAttribute('data-caption');
+            openModal(imageSrc, caption);
+        });
+    });
+
+    // Close modal when clicking close button
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+    }
+
+    // Close modal when clicking outside the image
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (modal.style.display === 'block' && e.key === 'Escape') {
+            closeModal();
+        }
+    });
 });
 </script>
 
