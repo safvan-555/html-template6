@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'About Us - PoolWash')
+@section('title', 'About Us - Crystal Craft')
 @section('body-class', 'homepage3-body')
 
 @section('content')
@@ -39,13 +39,13 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="images reveal image-anime">
-                        <img src="{{ asset('assets/img/all-images/about/about-img3.png') }}" alt="About PoolWash" />
+                        <img src="{{ asset('assets/img/all-images/about/about-img3.png') }}" alt="About Crystal craft" />
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="about3-header heading6">
                         <h5 data-aos="fade-left" data-aos-duration="800">
-                            About Poolwash
+                            About Crystal Craft
                         </h5>
                         <h2 class="text-anime-style-3">
                             We Provide Premium Pool Cleaning Services

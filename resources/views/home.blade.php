@@ -169,7 +169,7 @@
 
             <div class="col-lg-6">
                 <div class="service3-header heading6">
-                    <h5 data-aos="fade-left" data-aos-duration="800">Our Service Us Poolwash</h5>
+                    <h5 data-aos="fade-left" data-aos-duration="800">Our Service Us</h5>
                     <h2 class="text-anime-style-3"> {{ $homeData->our_service_heading ?? '' }}</h2>
                     <p data-aos="fade-left" data-aos-duration="1000">{{ $homeData->our_service_paragraph ?? '' }}</p>
                     <div class="space40"></div>
@@ -190,7 +190,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="work-header heading2">
-                    <h5 data-aos="fade-right" data-aos-duration="800">Latest Work Poolwash</h5>
+                    <h5 data-aos="fade-right" data-aos-duration="800">Latest Work</h5>
                     <h2 class="text-anime-style-3"> {{ $homeData->latest_work_heading ?? '' }}</h2>
                     <p data-aos="fade-right" data-aos-duration="1000">{{ $homeData->latest_work_paragraph ?? '' }}</p>
                 </div>
@@ -296,7 +296,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="testimonial-header heading4">
-                    <h5>Testimonial Poolwash</h5>
+                    <h5>Testimonial</h5>
                     <h2>{{ $homeData->testimonial_heading ?? '' }}</h2>
                     <p>{{ $homeData->testimonial_paragraph ?? '' }}</p>
                 </div>
@@ -350,7 +350,7 @@
         <div class="row">
             <div class="col-lg-8 m-auto">
                 <div class="contact-heading heading6 text-center">
-                    <h5>Contact Us Crystal Craft</h5>
+                    <h5>Contact Us</h5>
                     <h2>{{ $homeData->contactus_heading ?? '' }}</h2>
                     <p>
                         {{ $homeData->contactus_paragraph ?? '' }}
