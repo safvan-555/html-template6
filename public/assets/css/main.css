@@ -3751,7 +3751,7 @@ ul.pagination li a.active {
 }
 .hero3-section-area .hero4-header .btn-area2 .header-btn3.btn2:hover {
   background: var(--ztc-text-text-8);
-  color: var(--ztc-text-text-9);
+  color: var(--ztc-text-text-1);
   transition: all 0.4s;
   border: 2px solid var(--ztc-text-text-8);
 }

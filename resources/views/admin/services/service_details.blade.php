@@ -4,7 +4,6 @@
 @section('header', 'Edit Service')
 
 @section('styles')
-<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
 <style>
     .preview-image {
         max-width: 200px;
@@ -192,39 +191,31 @@
 @endsection
 
 @section('scripts')
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
 
 <script>
 $(document).ready(function() {
     // Initialize Summernote for description
     $('#description').summernote({
-        height: 300,                 // Set editor height
-        minHeight: 200,             // Set minimum height
-        maxHeight: 400,             // Set maximum height
-        focus: true,                // Set focus to editable area after initializing summernote
-        placeholder: 'Enter detailed description here...',
+        height: 250,
         toolbar: [
-            // [groupName, [list of button]]
             ['style', ['style']],
-            ['font', ['bold', 'underline', 'clear']],
-            ['fontname', ['fontname']],
-            ['color', ['color']],
+            ['font', ['bold', 'italic', 'underline', 'strikethrough', 'clear']],
+            ['fontsize', ['fontsize']],  // Font size selector
+            ['fontname', ['fontname']],   // Font family selector
+            ['color', ['color']],         // Text & background color
             ['para', ['ul', 'ol', 'paragraph']],
+            ['height', ['height']],       // Line height
             ['table', ['table']],
-            ['insert', ['picture' ]],
-            // ['insert', ['link', 'picture', 'video']],
-            ['view', ['fullscreen', 'codeview', 'help']],
+            ['insert', ['link', 'picture', 'video']],
+            ['view', ['fullscreen', 'codeview', 'help']]
         ],
-        callbacks: {
-            onImageUpload: function(files) {
-                // Handle image upload here if needed
-                // You can implement AJAX image upload to server
-                for(let i = 0; i < files.length; i++) {
-                    console.log('Image file ready to upload:', files[i]);
-                    // Add custom image upload logic here
-                }
-            }
-        }
+        fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '20', '22', '24', '28', '30', '36', '48', '72'],
+        fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Helvetica', 'Impact', 'Tahoma', 'Times New Roman', 'Verdana'],
+        colors: [
+            ['#000000', '#424242', '#636363', '#9C9C9C', '#CECECE', '#EFEFEF', '#FCFCFC'],
+            ['#980000', '#FF0000', '#FF9900', '#FFFF00', '#00FF00', '#00FFFF', '#4A86E8', '#0000FF'],
+            ['#9900FF', '#FF00FF', '#E6B8AF', '#D5A6BD', '#B4A7D6', '#9FC5E8', '#B6D7A8', '#FFE599']
+        ]
     });
 
     // Banner image preview

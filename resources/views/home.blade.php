@@ -40,10 +40,10 @@
                     </p>
                     <div class="btn-area2" data-aos="fade-up" data-aos-duration="1200">
                         <a href="{{ route('contact') }}" class="header-btn3">
-                            <img src="{{ asset('assets/img/icons/logo-icon3.svg') }}" alt="" /> Schedule A Service
+                            Schedule A Service
                         </a>
                         <a href="{{ route('about') }}" class="header-btn3 btn2">
-                            <img src="{{ asset('assets/img/icons/logo-icon3.svg') }}" alt="" /> Discover More
+                            Discover More
                         </a>
                     </div>
                 </div>

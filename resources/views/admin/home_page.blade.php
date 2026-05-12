@@ -6,7 +6,6 @@
 @section('header', 'Edit Home Page')
 
 @section('styles')
-<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
 <style>
 .nav-tabs .nav-link {
     color: #495057;
@@ -537,23 +536,30 @@
 @endsection
 
 @section('scripts')
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <script>
 $(document).ready(function() {
     // Initialize Summernote for any textarea if needed
     $('.summernote').summernote({
-        height: 200,
+        height: 250,
         toolbar: [
             ['style', ['style']],
-            ['font', ['bold', 'italic', 'underline', 'clear']],
-            ['fontname', ['fontname']],
-            ['color', ['color']],
+            ['font', ['bold', 'italic', 'underline', 'strikethrough', 'clear']],
+            ['fontsize', ['fontsize']],  // Font size selector
+            ['fontname', ['fontname']],   // Font family selector
+            ['color', ['color']],         // Text & background color
             ['para', ['ul', 'ol', 'paragraph']],
+            ['height', ['height']],       // Line height
             ['table', ['table']],
-            ['insert', ['link']],
+            ['insert', ['link', 'picture', 'video']],
             ['view', ['fullscreen', 'codeview', 'help']]
+        ],
+        fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '20', '22', '24', '28', '30', '36', '48', '72'],
+        fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Helvetica', 'Impact', 'Tahoma', 'Times New Roman', 'Verdana'],
+        colors: [
+            ['#000000', '#424242', '#636363', '#9C9C9C', '#CECECE', '#EFEFEF', '#FCFCFC'],
+            ['#980000', '#FF0000', '#FF9900', '#FFFF00', '#00FF00', '#00FFFF', '#4A86E8', '#0000FF'],
+            ['#9900FF', '#FF00FF', '#E6B8AF', '#D5A6BD', '#B4A7D6', '#9FC5E8', '#B6D7A8', '#FFE599']
         ]
     });
 });

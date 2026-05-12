@@ -5,10 +5,9 @@
 
 @section('content')
 
-
 <style>
 .inner-header-section-area {
-    background-image: url('{{ asset('assets/img/bg/inner-bg1.png') }}') !important;
+    background-image: url('{{ asset('assets/img/bg/contact.jpeg') }}') !important;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
