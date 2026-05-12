@@ -214,7 +214,7 @@
                                     <img src="{{ asset('assets/img/icons/arrow1.svg') }}"></a>
                             </div>
                             <div class="space24"></div>
-                            <p>{{ $project->service->name ?? 'Cleaning & Services' }}</p>
+                            <!-- <p>{{ $project->service->name ?? 'Cleaning & Services' }}</p> -->
                             <div class="space16"></div>
                             <a href="#">{{ $project->heading }}</a>
                             <div class="img2">

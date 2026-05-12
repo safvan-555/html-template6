@@ -17,7 +17,6 @@
 }
 </style>
 
-
 <div class="inner-header-section-area">
     <div class="elements2">
         <img src="{{ asset('assets/img/elements/elements2.png') }}" alt="" class="elements15" />
@@ -25,6 +24,7 @@
     <div class="elements4">
         <img src="{{ asset('assets/img/elements/elements4.png') }}" alt="" class="elements15" />
     </div>
+
 
     <div class="container">
         <div class="row">
@@ -98,7 +98,7 @@
                         @endif
                     </div>
                     <div class="text-area">
-                        <p>{{ $project->service->name ?? 'Cleaning & Services' }}</p>
+                        <!-- <p>{{ $project->service->name ?? 'Cleaning & Services' }}</p> -->
                         <a href="#">{{ $project->heading }}</a>
                     </div>
                     <div class="arrow">
@@ -113,6 +113,16 @@
             @empty
             @endforelse
         </div>
+
+
+         @if($projects->hasPages())
+        <div class="row">
+            <div class="col-lg-12">
+                {{ $projects->links('pagination::custom') }}
+
+            </div>
+        </div>
+        @endif
 
     </div>
 </div>

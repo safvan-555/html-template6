@@ -212,7 +212,7 @@
                         <input type="text" class="form-control" id="sub_heading" name="sub_heading">
                     </div>
 
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label for="service_id" class="form-label">Associated Service (Optional)</label>
                         <select class="form-control" id="service_id" name="service_id">
                             <option value="">-- None --</option>
@@ -220,7 +220,7 @@
                             <option value="{{ $service->id }}">{{ $service->card_heading }}</option>
                             @endforeach
                         </select>
-                    </div>
+                    </div> -->
 
                     <!-- <div class="mb-3">
                         <label for="description" class="form-label">Description</label>

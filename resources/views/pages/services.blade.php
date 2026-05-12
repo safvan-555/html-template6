@@ -69,7 +69,7 @@
         @if($services->hasPages())
         <div class="row">
             <div class="col-lg-12">
-                {{ $services->links() }}
+                {{ $services->links('pagination::custom') }}
             </div>
         </div>
         @endif

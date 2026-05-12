@@ -72,7 +72,7 @@
                             alt="{{ $moreProject->heading ?? 'Project Image' }}">
                     </div>
                     <div class="text-area">
-                        <p>{{ $moreProject->service->name ?? 'Cleaning & Services' }}</p>
+                        <!-- <p>{{ $moreProject->service->name ?? 'Cleaning & Services' }}</p> -->
                         <a
                             href="{{ route('project.show', $moreProject->id) }}">{{ $moreProject->heading ?? 'Crafting Pool Perfection' }}</a>
                     </div>

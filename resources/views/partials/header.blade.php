@@ -230,6 +230,8 @@
                                 <li><a href="{{ route('about') }}">About</a></li>
                                 <li><a href="{{ route('services') }}">Services</a></li>
                                 <li><a href="{{ route('projects') }}">Projects</a></li>
+                                <li><a href="{{ asset('assets/doc/Crystal Craft Company Profile.pdf') }}"
+                                        target="_blank">Company Profile</a></li>
                                 <li><a href="{{ route('contact') }}">Contact Us</a></li>
                                 <!-- <li><a href="{{ route('pages') }}">Pages</a></li> -->
                             </ul>
@@ -395,7 +397,8 @@ quoteForm.addEventListener('submit', async (e) => {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute(
+                'content')
         },
         body: JSON.stringify(formData)
     });

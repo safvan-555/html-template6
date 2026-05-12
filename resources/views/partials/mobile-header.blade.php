@@ -4,7 +4,8 @@
         <div class="col-12">
             <div class="mobile-header-elements">
                 <div class="mobile-logo">
-                    <a href="{{ url('/') }}"><img src="{{ asset('assets/img/logo/Crystal-Craft-Logo.svg') }}" alt=""/></a>
+                    <a href="{{ url('/') }}"><img src="{{ asset('assets/img/logo/Crystal-Craft-Logo.svg') }}"
+                            alt="" /></a>
                 </div>
                 <div class="mobile-nav-icon dots-menu">
                     <i class="fa-solid fa-bars"></i>
@@ -29,6 +30,9 @@
             <li><a href="{{ route('about') }}">About</a></li>
             <li><a href="{{ route('services') }}">Services</a></li>
             <li><a href="{{ route('projects') }}">Projects</a></li>
+            <li><a href="{{ asset('assets/doc/Crystal Craft Company Profile.pdf') }}" target="_blank">Company
+                    Profile</a></li>
+
             <li><a href="{{ route('contact') }}">Contact Us</a></li>
         </ul>
 
@@ -74,7 +78,9 @@
                         <div class="social-links-mobile-menu">
                             <ul>
                                 <li><a target="_blank" href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a target="_blank" href="https://www.instagram.com/crystalcraftuae?igsh=MW40dm1jOXNnaTdqZA=="><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a target="_blank"
+                                        href="https://www.instagram.com/crystalcraftuae?igsh=MW40dm1jOXNnaTdqZA=="><i
+                                            class="fa-brands fa-instagram"></i></a></li>
                                 <li><a target="_blank" href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
                                 <li><a target="_blank" href="#"><i class="fa-brands fa-youtube"></i></a></li>
                             </ul>

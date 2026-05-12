@@ -267,7 +267,7 @@
                                 </a>
                             </div>
                             <div class="space24"></div>
-                            <p>{{ $project->service->name ?? 'Cleaning & Services' }}</p>
+                            <!-- <p>{{ $project->service->name ?? 'Cleaning & Services' }}</p> -->
                             <div class="space16"></div>
                             <!-- <a href="{{ route('project.show', $project->id) }}">{{ $project->heading }}</a> -->
                             <a href="#">{{ $project->heading }}</a>

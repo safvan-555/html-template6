@@ -141,7 +141,7 @@
                             value="{{ old('sub_heading', $item->sub_heading) }}">
                     </div>
 
-                    <div class="col-md-12 mb-3">
+                    <!-- <div class="col-md-12 mb-3">
                         <label for="service_id" class="form-label">Associated Service</label>
                         <select class="form-control" id="service_id" name="service_id">
                             <option value="">-- None --</option>
@@ -152,7 +152,7 @@
                             </option>
                             @endforeach
                         </select>
-                    </div>
+                    </div> -->
 
                     <div class="col-md-12 mb-3">
                         <label for="description" class="form-label">Description</label>
